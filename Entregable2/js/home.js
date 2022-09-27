@@ -19,7 +19,7 @@ function verificarScroll(params) {
         izquierda.style.visibility = "visible";
     }
 
-    if(fila.scrollLeft>500){
+    if(fila.scrollLeft==(fila.scrollWidth-fila.offsetWidth)){
         derecha.style.visibility = "hidden";
     }else{
         derecha.style.visibility = "visible";
@@ -35,3 +35,40 @@ izquierda.addEventListener("click", () =>{
     fila.scrollLeft -= fila.offsetWidth;
     setTimeout(verificarScroll,500)
 })
+
+/* menu categorias desplegable */ 
+
+let categorias = document.querySelector("#categorias");
+categorias.addEventListener("click",mostrarCategorias);
+
+function mostrarCategorias(params) {
+    let listaCategorias = document.querySelector("#lista-categorias");
+    listaCategorias.classList.toggle("ocultar");
+}
+
+/* overlay y menu hamburguesa */
+
+let overlay = document.querySelector("#overlay");
+let menu = document.querySelector("#menu-hamburguesa");
+overlay.addEventListener("click",()=>{
+    overlay.classList.toggle("ocultar");
+    menu.classList.toggle("aumentar");
+    setTimeout(ocultar,400);
+})
+
+let btnHamburguesa = document.querySelector("#btn-hamburguesa");
+btnHamburguesa.addEventListener("click", desplegarMenu);
+
+function desplegarMenu(params) {
+    menu.classList.toggle("ocultar");
+    setTimeout(aumentar, 1);
+    overlay.classList.toggle("ocultar");
+}
+
+function aumentar(params) {
+    menu.classList.toggle("aumentar");
+}
+
+function ocultar(params) {
+    menu.classList.toggle("ocultar");
+}

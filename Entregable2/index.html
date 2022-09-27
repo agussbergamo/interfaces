@@ -8,20 +8,172 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Mohave:wght@400;600&family=Monofett&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Mohave:wght@400;600;700&family=Monofett&display=swap"
         rel="stylesheet">
     <title>OnGaming</title>
 </head>
 
 <body>
-    <header class="header">
-        <img src="img/logo.png" alt="Logo" class="logo">
-        <h1 class="texto-header">On Gaming</h1>
-        <img src="img/menu.png" class="menu"></img>
+    <div id="overlay" class="overlay ocultar"></div>
+    <header id="header" class="header">
+        <div>
+            <div>
+                <img src="img/logo.png" alt="Logo" class="logo">
+                <h1 class="texto-header">On Gaming</h1>
+            </div>
+            <div>
+                <div class="footer4">
+                    <iconify-icon icon="akar-icons:instagram-fill" class="icono-redes"></iconify-icon>
+                    <iconify-icon icon="ph:twitch-logo-bold" class="icono-redes"></iconify-icon>
+                    <iconify-icon icon="icon-park-outline:twitter" class="icono-redes"></iconify-icon>
+                    <iconify-icon icon="eva:facebook-outline" class="icono-redes"></iconify-icon>
+                    <iconify-icon icon="la:youtube" class="icono-redes"></iconify-icon>
+                    </div>
+                <img src="img/menu.png" id="btn-hamburguesa" class="menu"></img>
+            </div>
+        </div>
+        <ul id="menu-hamburguesa" class="ocultar">
+            <li>Redes</li>
+            <li>Mis datos</li>
+            <li>Cargar Saldo</li>
+            <li>Historial</li>
+            <li>Mis compras</li>
+            <li>FAQS</li>
+            <li>Log Out</li>
+        </ul>
     </header>
-    <div class="nav">Categorías</div>
+    <div class="nav" id="categorias">Categorías</div>
+    <ul class="ocultar" id="lista-categorias">
+        <li>Recomendados</li>
+        <li>Aventura</li>
+        <li>Estrategia</li>
+        <li>2 Personas</li>
+        <a href="#tiros"><li>Tiros</li></a>
+        <a href=""><li>Hero</li></a>
+    </ul>
     <div class="categorias">
-        <h3>Recomendados para ti</h3>
+        <h3 id="recomendados">Recomendados para ti</h3>
+        <ul class="carrusel">
+            <img src="img/flecha.png" alt="" class="flecha-ant">
+            <li>
+                <img src="img/tag-gratis.png" alt="" class="tag-gratis">
+                <img class="img-juego" src="img/1.jpg" alt="">
+                <h4>Sonic y sus amigues</h4>
+                <div class="estrellas">
+                    <img src="img/estrella.png" alt="" class="estrella">
+                    <img src="img/estrella.png" alt="" class="estrella">
+                    <img src="img/estrella.png" alt="" class="estrella">
+                    <img src="img/estrella.png" alt="" class="estrella">
+                    <img src="img/estrella.png" alt="" class="estrella">
+                </div>
+            </li>
+            <li>
+                <img  class="img-juego" src="img/2.jpg" alt="">
+                <h4>El rubio peleador</h4>
+                <div class="estrellas">
+                    <img src="img/estrella.png" alt="" class="estrella">
+                    <img src="img/estrella.png" alt="" class="estrella">
+                    <img src="img/estrella.png" alt="" class="estrella">
+                </div>
+                <p class="precio">$150</p>
+            </li>
+            <li>
+                <img class="img-juego" src="img/3.jpg" alt="">
+                <h4>Sonic y sus amigues</h4>
+                <div class="estrellas">
+                    <img src="img/estrella.png" alt="" class="estrella">
+                    <img src="img/estrella.png" alt="" class="estrella">
+                    <img src="img/estrella.png" alt="" class="estrella">
+                    <img src="img/estrella.png" alt="" class="estrella">
+                </div>
+                <p class="precio">$150</p>
+            </li>
+            <li>
+                <img src="img/tag-gratis.png" alt="" class="tag-gratis">
+                <img class="img-juego" src="img/4.jpg" alt="">
+                <h4>Sonic y sus amigues</h4>
+                <div class="estrellas">
+                    <img src="img/estrella.png" alt="" class="estrella">
+                    <img src="img/estrella.png" alt="" class="estrella">
+                    <img src="img/estrella.png" alt="" class="estrella">
+                    <img src="img/estrella.png" alt="" class="estrella">
+                    <img src="img/estrella.png" alt="" class="estrella">
+                </div>
+                <p class="precio">$150</p>
+            </li>
+            <li>
+                <img src="img/tag-gratis.png" alt="" class="tag-gratis">
+                <img class="img-juego" src="img/5.jpg" alt="">
+                <h4>Sonic y sus amigues</h4>
+                <div class="estrellas">
+                    <img src="img/estrella.png" alt="" class="estrella">
+                    <img src="img/estrella.png" alt="" class="estrella">
+                    <img src="img/estrella.png" alt="" class="estrella">
+                    <img src="img/estrella.png" alt="" class="estrella">
+                    <img src="img/estrella.png" alt="" class="estrella">
+                </div>
+                <p class="precio">$150</p>
+            </li>
+            <li>
+                <img src="img/6.jpg" alt="">
+                <h4>Sonic y sus amigues</h4>
+                <div class="estrellas">
+                    <img src="img/estrella.png" alt="" class="estrella">
+                    <img src="img/estrella.png" alt="" class="estrella">
+                    <img src="img/estrella.png" alt="" class="estrella">
+                    <img src="img/estrella.png" alt="" class="estrella">
+                </div>
+                <p class="precio">$150</p>
+            </li>
+            <li>
+                <img src="img/3.jpg" alt="">
+                <h4>Sonic y sus amigues</h4>
+                <div class="estrellas">
+                    <img src="img/estrella.png" alt="" class="estrella">
+                    <img src="img/estrella.png" alt="" class="estrella">
+                    <img src="img/estrella.png" alt="" class="estrella">
+                    <img src="img/estrella.png" alt="" class="estrella">
+                </div>
+                <p class="precio">$150</p>
+            </li>
+            <li>
+                <img src="img/3.jpg" alt="">
+                <h4>Sonic y sus amigues</h4>
+                <div class="estrellas">
+                    <img src="img/estrella.png" alt="" class="estrella">
+                    <img src="img/estrella.png" alt="" class="estrella">
+                    <img src="img/estrella.png" alt="" class="estrella">
+                    <img src="img/estrella.png" alt="" class="estrella">
+                </div>
+                <p class="precio">$150</p>
+            </li>
+            <li>
+                <img src="img/3.jpg" alt="">
+                <h4>Sonic y sus amigues</h4>
+                <div class="estrellas">
+                    <img src="img/estrella.png" alt="" class="estrella">
+                    <img src="img/estrella.png" alt="" class="estrella">
+                    <img src="img/estrella.png" alt="" class="estrella">
+                    <img src="img/estrella.png" alt="" class="estrella">
+                </div>
+                <p class="precio">$150</p>
+            </li>
+            <li>
+                <img src="img/3.jpg" alt="">
+                <h4>Sonic y sus amigues</h4>
+                <div class="estrellas">
+                    <img src="img/estrella.png" alt="" class="estrella">
+                    <img src="img/estrella.png" alt="" class="estrella">
+                    <img src="img/estrella.png" alt="" class="estrella">
+                    <img src="img/estrella.png" alt="" class="estrella">
+                </div>
+                <p class="precio">$150</p>
+            </li>
+            <img src="img/flecha.png" alt="" class="flecha-sig">
+        </ul>
+    </div>
+    <div class="categorias">
+        <h3 id="aventuras">Juegos de aventuras</h3>
         <ul class="carrusel">
             <img src="img/flecha.png" alt="" class="flecha-ant">
             <li>
@@ -87,7 +239,7 @@
         </ul>
     </div>
     <div class="categorias">
-        <h3>Juegos de aventuras</h3>
+        <h3 id="estrategia">Juegos de estrategia</h3>
         <ul class="carrusel">
             <img src="img/flecha.png" alt="" class="flecha-ant">
             <li>
@@ -153,7 +305,7 @@
         </ul>
     </div>
     <div class="categorias">
-        <h3>Juegos de estrategia</h3>
+        <h3 id="dosJugadores">Juegos de 2 jugadores</h3>
         <ul class="carrusel">
             <img src="img/flecha.png" alt="" class="flecha-ant">
             <li>
@@ -219,73 +371,7 @@
         </ul>
     </div>
     <div class="categorias">
-        <h3>Juegos de 2 jugadores</h3>
-        <ul class="carrusel">
-            <img src="img/flecha.png" alt="" class="flecha-ant">
-            <li>
-                <img src="img/tag-gratis.png" alt="" class="tag-gratis">
-                <img src="img/1.jpg" alt="">
-                <h4>Sonic y sus amigues</h4>
-                <div class="estrellas">
-                    <img src="img/estrella.png" alt="" class="estrella">
-                    <img src="img/estrella.png" alt="" class="estrella">
-                    <img src="img/estrella.png" alt="" class="estrella">
-                    <img src="img/estrella.png" alt="" class="estrella">
-                    <img src="img/estrella.png" alt="" class="estrella">
-                </div>
-            </li>
-            <li>
-                <img src="img/2.jpg" alt="">
-                <h4>El rubio peleador</h4>
-                <div class="estrellas">
-                    <img src="img/estrella.png" alt="" class="estrella">
-                    <img src="img/estrella.png" alt="" class="estrella">
-                    <img src="img/estrella.png" alt="" class="estrella">
-                </div>
-                <p class="precio">$150</p>
-            </li>
-            <li>
-                <img src="img/3.jpg" alt="">
-                <h4>Sonic y sus amigues</h4>
-                <div class="estrellas">
-                    <img src="img/estrella.png" alt="" class="estrella">
-                    <img src="img/estrella.png" alt="" class="estrella">
-                    <img src="img/estrella.png" alt="" class="estrella">
-                    <img src="img/estrella.png" alt="" class="estrella">
-                </div>
-                <p class="precio">$150</p>
-            </li>
-            <li>
-                <img src="img/tag-gratis.png" alt="" class="tag-gratis">
-                <img src="img/4.jpg" alt="">
-                <h4>Sonic y sus amigues</h4>
-                <div class="estrellas">
-                    <img src="img/estrella.png" alt="" class="estrella">
-                    <img src="img/estrella.png" alt="" class="estrella">
-                    <img src="img/estrella.png" alt="" class="estrella">
-                    <img src="img/estrella.png" alt="" class="estrella">
-                    <img src="img/estrella.png" alt="" class="estrella">
-                </div>
-                <p class="precio">$150</p>
-            </li>
-            <li>
-                <img src="img/tag-gratis.png" alt="" class="tag-gratis">
-                <img src="img/5.jpg" alt="">
-                <h4>Sonic y sus amigues</h4>
-                <div class="estrellas">
-                    <img src="img/estrella.png" alt="" class="estrella">
-                    <img src="img/estrella.png" alt="" class="estrella">
-                    <img src="img/estrella.png" alt="" class="estrella">
-                    <img src="img/estrella.png" alt="" class="estrella">
-                    <img src="img/estrella.png" alt="" class="estrella">
-                </div>
-                <p class="precio">$150</p>
-            </li>
-            <img src="img/flecha.png" alt="" class="flecha-sig">
-        </ul>
-    </div>
-    <div class="categorias">
-        <h3>Juegos de tiros</h3>
+        <h3 id="tiros">Juegos de tiros</h3>
         <ul class="carrusel">
             <img src="img/flecha.png" alt="" class="flecha-ant">
             <li>
@@ -368,7 +454,7 @@
             <li class="h3">Contactate con nosotros</li>
             <li class="h3">Dejanos tu CV</li>
         </ul>
-        <img src="img/flecha.png" alt="Flecha_arriba" class="flecha-arriba">
+        <a href="#header"><img src="img/flecha.png" alt="Flecha_arriba" class="flecha-arriba"></a>
         <div class="footer4">
             <iconify-icon icon="akar-icons:instagram-fill" class="icono-redes"></iconify-icon>
             <iconify-icon icon="ph:twitch-logo-bold" class="icono-redes"></iconify-icon>

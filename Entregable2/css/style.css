@@ -2,10 +2,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-ul {
     list-style: none;
+    scroll-behavior: smooth;
 }
 
 body{
@@ -13,15 +11,64 @@ body{
     height: 100%;   
 }
 
+/* overlay */
+
+.overlay{
+    position: fixed; 
+    width: 100%; 
+    height: 100%; 
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 2; 
+}
+
+/* links*/
+a{
+    text-decoration: none;
+}
+a:visited{
+    color: #fffef8;
+}
+
+/* clase para ocultar y mostrar*/
+.ocultar{
+    display: none;
+}
 
 /*Header*/
 
 .header{
     display: flex; 
-    justify-content: space-around;
     align-items: center;
     background-color: #2A2F3A;
     height: 100px;
+}
+
+header ul{
+    position: absolute;
+    top: 80px;
+    right: 3px;
+    z-index: 6;
+    width: 22%;
+    transition: all 0.5s;
+}
+
+header ul.aumentar{
+    width: 50%;
+}
+
+
+header ul li{
+   background-color:#0E978F ; 
+   color:#fffef8;
+   font-family: 'Mohave', sans-serif;
+   font-weight: 600;
+   margin-top: 4px;
+   text-align: center;
+   padding: 5px;
 }
 
 .logo {
@@ -54,6 +101,20 @@ body{
     align-items: center;
 }
 
+div.nav + ul{
+    text-align: center;
+    font-family: 'Mohave', sans-serif;
+    color: #fffef8;
+    background-color: #0e978f;
+}
+
+
+div.nav + ul a:last-child li{
+  background-color: #FECA65;
+  color: #2A2F3A;
+  font-weight: 500;
+}
+
 
 /*Categorías*/
 
@@ -74,10 +135,11 @@ h4 {
 
 .carrusel{
     display: flex;
-    gap: 15px; 
     align-items: center;    
     overflow: hidden;
-    height: 220px;
+    scroll-behavior:smooth;
+    flex-wrap: wrap;
+    gap: 15px;
 }
 
 .flecha-ant{
@@ -191,3 +253,116 @@ h4 {
     color: #fffef8;
 }
 
+/* botones*/
+
+.btn-jugar{
+    background-color:#77F4ED;
+    border-radius: 35px;
+    font-weight: 500;
+    width: 100px;
+    height: 40px;
+    font-family: 'Mohave';
+    font-size: larger;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+/* btn.jugar hover*/
+
+.btn-jugar:hover{
+    background-color: #FECA65;
+}
+
+
+@media only screen and (min-width: 1024px) {
+   /* carrusel*/
+
+    .carrusel{
+        flex-wrap: nowrap;
+    }
+
+    ul.carrusel{
+        height: 275px;
+    }
+
+    ul.carrusel li{
+        min-width: 226px;
+        height: 254px;
+    }
+    .img-juego{
+        width: 100%;
+    }
+    .tag-gratis{
+        width: 90px;
+        height: 30px;
+    }
+
+    .carrusel h4{
+        font-size: 22px;
+    }
+
+    .carrusel p{
+        font-size: 20px;
+    }
+
+    .estrella{
+        height: 20px;
+        width: 20px;
+    }
+
+    h3{
+        font-size: 30px;
+    }
+
+
+   
+    /* nav */
+
+    div.nav{
+        display: none;
+    }
+    div.nav + ul{
+        display: flex;
+        justify-content: space-between;
+        font-size: 30px;
+    }
+    div.nav + ul li{
+        min-width: 16%;
+        padding: 5px 0 5px;
+    }
+
+    div.nav + ul li:hover{
+        background-color: #2A2F3A;
+    }
+
+    div.nav + ul a:last-child li:hover{
+        background-color: #d29315;
+        color: #fffef8;
+    }
+    /* menu hamburguesa*/
+    header ul li:hover{
+        font-weight: 700;
+        font-size: large;
+    }
+
+    header ul{
+        width: 10%;
+    }
+
+    header ul.aumentar{
+        width: 25%;
+    }
+
+    header > div{
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+    }
+
+    header div:first-child{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    
+}
