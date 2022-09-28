@@ -115,6 +115,10 @@ div.nav + ul a:last-child li{
   font-weight: 500;
 }
 
+div.nav + ul a:visited{
+    color: #fffef8;
+}
+
 
 /*Categorías*/
 
@@ -279,6 +283,7 @@ h4 {
 
     .carrusel{
         flex-wrap: nowrap;
+        gap: 35px;
     }
 
     ul.carrusel{
@@ -314,6 +319,22 @@ h4 {
         font-size: 30px;
     }
 
+    .flecha-ant, .flecha-sig{
+        height: 43px;
+        width: 43px;
+    }
+
+    .flecha-ant{
+        left: 25px;
+    }
+
+    .flecha-sig{
+        right: 25px;
+    }
+
+    .categorias{
+        padding: 20px 60px 20px; 
+    }
 
    
     /* nav */
@@ -366,7 +387,6 @@ h4 {
         width: 45%;
     }
 
-   
 
     
 }

@@ -1,14 +1,11 @@
 "use strict"; 
 
 
-let fila = document.querySelector(".carrusel");
-console.log(fila);
-let derecha = document.querySelector(".flecha-sig");
-console.log(derecha);
-let izquierda = document.querySelector(".flecha-ant");
-console.log(izquierda);
+let filas = document.querySelectorAll(".carrusel");
+let derechas = document.querySelectorAll(".flecha-sig");
+let izquierdas = document.querySelectorAll(".flecha-ant");
 
-verificarScroll();
+/*verificarScroll();*/
 
 //ver de cambiar el style en linea con classList.add etc.
 function verificarScroll(params) {
@@ -26,7 +23,14 @@ function verificarScroll(params) {
     }
 }
 
-derecha.addEventListener("click", () =>{
+derechas.forEach(flecha => addEventListener("click", () =>{
+    console.log(flecha);
+    console.log(flecha.parentNode);
+    flecha.parentNode.scrollLeft += flecha.parentNode.offsetWidth;
+    //setTimeout(verificarScroll,500);
+}))
+
+/*derechas.addEventListener("click", () =>{
     fila.scrollLeft += fila.offsetWidth;
     setTimeout(verificarScroll,500);
 })
@@ -34,7 +38,7 @@ derecha.addEventListener("click", () =>{
 izquierda.addEventListener("click", () =>{
     fila.scrollLeft -= fila.offsetWidth;
     setTimeout(verificarScroll,500)
-})
+})*/
 
 /* menu categorias desplegable */ 
 
@@ -71,4 +75,18 @@ function aumentar(params) {
 
 function ocultar(params) {
     menu.classList.toggle("ocultar");
+}
+
+
+/*hover card*/
+
+let card = document.querySelector(".card");
+card.addEventListener("mouseover", mostrarBoton);
+
+let info = document.querySelector(".contenedor-info");
+let boton = document.querySelector("#jugar");
+
+function mostrarBoton(params){
+    info.classList.toggle("ocultar");
+    boton.classList.toggle("ocultar");
 }
