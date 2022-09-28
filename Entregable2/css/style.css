@@ -355,14 +355,18 @@ h4 {
 
     header > div{
         display: flex;
-        justify-content: space-around;
         width: 100%;
+        justify-content: space-between;
+        align-items: center;
     }
 
-    header div:first-child{
+    header > div > div{
         display: flex;
-        justify-content: space-between;
+        justify-content: space-evenly;
+        width: 45%;
     }
+
+   
 
     
 }
