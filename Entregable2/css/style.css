@@ -45,6 +45,7 @@ a:visited{
     align-items: center;
     background-color: #2A2F3A;
     height: 100px;
+    justify-content: space-around;
 }
 
 header ul{
@@ -88,6 +89,9 @@ header ul li{
     height: 25px;
 }
 
+ header .redes{
+    display: none;
+}
 
 /*Nav*/
 
@@ -153,6 +157,7 @@ h4 {
     position: absolute;
     z-index: 500;
     left: 5px;
+    display: none;
 }
 
 .flecha-sig{
@@ -161,6 +166,7 @@ h4 {
     position: absolute;
     z-index: 500;
     right: 5px;
+    display: none;
 }
 
 .carrusel li{
@@ -209,7 +215,7 @@ h4 {
     background-color: #2A2F3A;
     display: grid; 
     grid-template-areas: "footer1 footer2 footer3"
-                         "flecha-arriba footer4 footer4";
+                         "flecha-arriba redes redes";
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 3fr 1fr;
     justify-items: center;   
@@ -228,8 +234,8 @@ h4 {
     grid-area: footer3;
 }
 
-.footer4{
-    grid-area: footer4;
+.redes{
+    grid-area: redes;
 }
 
 .flecha-arriba{
@@ -326,16 +332,55 @@ h4 {
 
     .flecha-ant{
         left: 25px;
+        display: block;
     }
 
     .flecha-sig{
         right: 25px;
+        display: block;
     }
 
     .categorias{
         padding: 20px 60px 20px; 
     }
 
+    /* cards */
+
+    .btn-card{
+        width: 111px;
+        height: 42px;
+        border-radius: 35px;
+        background-color: #77F4ED;
+        font-family: 'Mohave', sans-serif;
+        font-weight: 500;
+        font-size: 30px;
+        position: absolute;
+        overflow: hidden;
+        transition: 0.5s;
+    }
+
+    .btn-card::before{
+        content: '';
+        position: absolute;
+        top: var(--y);
+        left: var(--x);
+        transform: translate(-50%,-50%);
+        width: 0px;
+        height: 0px;
+        background: #FECA65;
+        border-radius: 50%;
+        transition: width 0.5s, height 0.5s;
+       }
+
+       .btn-card:hover::before{
+        width: 300px;
+        height: 300px;
+       }
+
+       .btn-card span{
+        z-index: 1;
+        position: relative;
+       }
    
     /* nav */
 
@@ -360,6 +405,13 @@ h4 {
         background-color: #d29315;
         color: #fffef8;
     }
+
+    /* redes header */
+    header .redes{
+        display: block;
+    }
+
+
     /* menu hamburguesa*/
     header ul li:hover{
         font-weight: 700;
@@ -374,19 +426,18 @@ h4 {
         width: 25%;
     }
 
-    header > div{
+    
+   
+
+    .contenedor-btn-card{
         display: flex;
-        width: 100%;
-        justify-content: space-between;
-        align-items: center;
+        justify-content: center;
+        position: relative;
+        bottom: -25px;
     }
 
-    header > div > div{
-        display: flex;
-        justify-content: space-evenly;
-        width: 45%;
-    }
-
+    
+    
 
     
 }

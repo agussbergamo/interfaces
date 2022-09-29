@@ -4,41 +4,45 @@
 let filas = document.querySelectorAll(".carrusel");
 let derechas = document.querySelectorAll(".flecha-sig");
 let izquierdas = document.querySelectorAll(".flecha-ant");
-
-/*verificarScroll();*/
+asignarFuncionFlechas();
+verificarScroll();
 
 //ver de cambiar el style en linea con classList.add etc.
-function verificarScroll(params) {
-    console.log(fila.scrollLeft);
-    if(fila.scrollLeft==0){
-        izquierda.style.visibility = "hidden";
-    }else{
-        izquierda.style.visibility = "visible";
+function verificarScroll(elem) {
+    console.log(elem)
+    if(elem){
+        console.log(elem.parentElement.scrollLeft)
+        if(elem.parentElement.scrollLeft==0){
+            elem.style.visibility = "hidden";
+        }else{
+            elem.style.visibility = "visible";
+        }
+    
+        if(elem.parentElement.scrollLeft==(elem.parentElement.scrollWidth-elem.parentElement.offsetWidth)){
+            elem.style.visibility = "hidden";
+        }else{
+            elem.style.visibility = "visible";
+        }
     }
-
-    if(fila.scrollLeft==(fila.scrollWidth-fila.offsetWidth)){
-        derecha.style.visibility = "hidden";
-    }else{
-        derecha.style.visibility = "visible";
+    
+}
+function asignarFuncionFlechas(params) {
+    for (const flecha of derechas) {
+        flecha.addEventListener("click",moverCarruselDer);
+    }
+    for (const flecha of izquierdas) {
+        flecha.addEventListener("click",moverCarruselIzq)
     }
 }
+function moverCarruselDer(params) {
+    this.parentElement.scrollLeft += 530;
+   setTimeout(verificarScroll(this),1000);
+}
+function moverCarruselIzq(params) {
+    this.parentElement.scrollLeft -= 530;
+   setTimeout(verificarScroll(this),1000) ;
+}
 
-derechas.forEach(flecha => addEventListener("click", () =>{
-    console.log(flecha);
-    console.log(flecha.parentNode);
-    flecha.parentNode.scrollLeft += flecha.parentNode.offsetWidth;
-    //setTimeout(verificarScroll,500);
-}))
-
-/*derechas.addEventListener("click", () =>{
-    fila.scrollLeft += fila.offsetWidth;
-    setTimeout(verificarScroll,500);
-})
-
-izquierda.addEventListener("click", () =>{
-    fila.scrollLeft -= fila.offsetWidth;
-    setTimeout(verificarScroll,500)
-})*/
 
 /* menu categorias desplegable */ 
 
@@ -80,13 +84,45 @@ function ocultar(params) {
 
 /*hover card*/
 
-let card = document.querySelector(".card");
-card.addEventListener("mouseover", mostrarBoton);
+let cards = document.querySelectorAll(".card");
 
-let info = document.querySelector(".contenedor-info");
-let boton = document.querySelector("#jugar");
+for (const card of cards) {
+    card.addEventListener("mouseover",mostrarBoton)
+    card.addEventListener("mouseout",mostrarBoton);
+}
 
 function mostrarBoton(params){
+    let info = this.querySelector(".contenedor-info");
     info.classList.toggle("ocultar");
+    let boton = this.querySelector(".btn-card")
     boton.classList.toggle("ocultar");
 }
+
+
+/* hover btn card*/ 
+
+let botonesCard = document.querySelectorAll(".btn-card");
+console.log(botonesCard)
+
+for (const boton of botonesCard) {
+    boton.addEventListener("mousemove",asignarHover)
+}
+
+function asignarHover(e) {
+    let chords = this.getBoundingClientRect();
+    let chorX = chords.left;
+    let chorY = chords.top;
+    let x = e.pageX - chorX;
+    let y = e.pageY - chorY;
+    this.style.setProperty('--x',x+'px');
+    this.style.setProperty('--y',y+'px');
+}
+/*boton1.onmousemove = function(e){
+    let chords = boton1.getBoundingClientRect();
+    let chorX = chords.left;
+    let chorY = chords.top;
+    let x = e.pageX - chorX;
+    let y = e.pageY - chorY;
+    boton1.style.setProperty('--x',x+'px');
+    boton1.style.setProperty('--y',y+'px');
+}*/

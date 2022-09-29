@@ -5,33 +5,33 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Mohave:wght@400;600;700&family=Monofett&display=swap"
         rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="css/style.css">
     <title>OnGaming</title>
 </head>
 
 <body>
     <div id="overlay" class="overlay ocultar"></div>
     <header id="header" class="header">
-        <div>
-            <div>
+        
+            
                 <img src="img/logo.png" alt="Logo" class="logo">
                 <h1 class="texto-header">On Gaming</h1>
-            </div>
-            <div>
-                <div class="footer4">
+            
+                <div class="redes">
                     <iconify-icon icon="akar-icons:instagram-fill" class="icono-redes"></iconify-icon>
                     <iconify-icon icon="ph:twitch-logo-bold" class="icono-redes"></iconify-icon>
                     <iconify-icon icon="icon-park-outline:twitter" class="icono-redes"></iconify-icon>
                     <iconify-icon icon="eva:facebook-outline" class="icono-redes"></iconify-icon>
                     <iconify-icon icon="la:youtube" class="icono-redes"></iconify-icon>
-                    </div>
+                </div>
+              
                 <img src="img/menu.png" id="btn-hamburguesa" class="menu"></img>
-            </div>
-        </div>
+            
+        
         <ul id="menu-hamburguesa" class="ocultar">
             <li>Redes</li>
             <li>Mis datos</li>
@@ -68,20 +68,24 @@
                         <img src="img/estrella.png" alt="" class="estrella">
                     </div>
                 </div>
-                <button id="jugar" class="ocultar">Jugar</button>
+                <div class="contenedor-btn-card"><button class="ocultar btn-card" id="PRUEBA"> <span> Jugar</button></span></div>
             </li>
-            <li>
+            <li class="card">
                 <img  class="img-juego" src="img/2.jpg" alt="">
-                <h4>Fall guys</h4>
-                <div class="estrellas">
-                    <img src="img/estrella.png" alt="" class="estrella">
-                    <img src="img/estrella.png" alt="" class="estrella">
-                    <img src="img/estrella.png" alt="" class="estrella">
+                <div class="contenedor-info">
+                    <h4>Fall guys</h4>
+                    <div class="estrellas">
+                        <img src="img/estrella.png" alt="" class="estrella">
+                        <img src="img/estrella.png" alt="" class="estrella">
+                        <img src="img/estrella.png" alt="" class="estrella">
+                    </div>
+                    <p class="precio">$150</p>
                 </div>
-                <p class="precio">$150</p>
-            </li>
-            <li>
+                <div class="contenedor-btn-card"><button class="ocultar btn-card"><span> Comprar</button></span></div>
+                </li>
+            <li class="card">
                 <img class="img-juego" src="img/3.jpg" alt="">
+                <div class="contenedor-info">
                 <h4>Super Mario</h4>
                 <div class="estrellas">
                     <img src="img/estrella.png" alt="" class="estrella">
@@ -90,27 +94,36 @@
                     <img src="img/estrella.png" alt="" class="estrella">
                 </div>
                 <p class="precio">$350</p>
+            </div>
+            <div class="contenedor-btn-card"><button class="ocultar btn-card"> <span> Comprar</button></span></div>
             </li>
-            <li>
+            <li class="card">
                 <img src="img/tag-gratis.png" alt="" class="tag-gratis">
                 <img class="img-juego" src="img/4.jpg" alt="">
+                <div class="contenedor-info">
                 <h4>Donkey Kong</h4>
                 <div class="estrellas">
                     <img src="img/estrella.png" alt="" class="estrella">
                     <img src="img/estrella.png" alt="" class="estrella">
                     <img src="img/estrella.png" alt="" class="estrella">
                 </div>
+            </div>
+            <div class="contenedor-btn-card"><button class="ocultar btn-card"> <span>Jugar</button></span></div>
             </li>
-            <li>
+            <li class="card">
                 <img src="img/tag-gratis.png" alt="" class="tag-gratis">
                 <img class="img-juego" src="img/5.jpg" alt="">
+                <div class="contenedor-info">
                 <h4>Araña solitaria</h4>
                 <div class="estrellas">
                     <img src="img/estrella.png" alt="" class="estrella">
                 </div>
+            </div>
+            <div class="contenedor-btn-card"><button class="ocultar btn-card"> <span>Jugar</button></span></div>
             </li>
-            <li>
+            <li class="card">
                 <img class="img-juego" src="img/6.jpg" alt="">
+                <div class="contenedor-info">
                 <h4>Naruto</h4>
                 <div class="estrellas">
                     <img src="img/estrella.png" alt="" class="estrella">
@@ -119,17 +132,23 @@
                     <img src="img/estrella.png" alt="" class="estrella">
                 </div>
                 <p class="precio">$200</p>
+                </div>
+                <div class="contenedor-btn-card"><button class="ocultar btn-card"> <span>Comprar</button></span></div>
             </li>
-            <li>
+            <li class="card">
                 <img class="img-juego" src="img/7.jpg" alt="">
+                <div class="contenedor-info">
                 <h4>Pájaros enojados</h4>
                 <div class="estrellas">
                     <img src="img/estrella.png" alt="" class="estrella">
                 </div>
                 <p class="precio">$100</p>
+                </div>
+                <div class="contenedor-btn-card"><button class="ocultar btn-card"> <span>Comprar</button></span></div>
             </li>
-            <li>
+            <li class="card">
                 <img class="img-juego" src="img/8.jpg" alt="">
+                <div class="contenedor-info">
                 <h4>El rubio y el otro</h4>
                 <div class="estrellas">
                     <img src="img/estrella.png" alt="" class="estrella">
@@ -138,10 +157,13 @@
                     <img src="img/estrella.png" alt="" class="estrella">
                 </div>
                 <p class="precio">$150</p>
+                </div>
+                <div class="contenedor-btn-card"><button class="ocultar btn-card"> <span>Comprar</button></span></div>
             </li>
-            <li>
+            <li class="card">
                 <img src="img/tag-gratis.png" alt="" class="tag-gratis">
                 <img class="img-juego" src="img/9.jpg" alt="">
+                <div class="contenedor-info">
                 <h4>Mahjong 4</h4>
                 <div class="estrellas">
                     <img src="img/estrella.png" alt="" class="estrella">
@@ -149,14 +171,19 @@
                     <img src="img/estrella.png" alt="" class="estrella">
                     <img src="img/estrella.png" alt="" class="estrella">
                 </div>
+                </div>
+                <div class="contenedor-btn-card"><button class="ocultar btn-card"> <span>Jugar</button></span></div>
             </li>
-            <li>
+            <li class="card">
                 <img src="img/tag-gratis.png" alt="" class="tag-gratis">
                 <img class="img-juego" src="img/10.jpg" alt="">
+                <div class="contenedor-info">
                 <h4>Emojis para dibujar</h4>
                 <div class="estrellas">
                     <img src="img/estrella.png" alt="" class="estrella">
                 </div>
+                </div>
+                <div class="contenedor-btn-card"><button class="ocultar btn-card"> <span>Jugar</button></span></div>
             </li>
             <img src="img/flecha.png" alt="" class="flecha-sig">
         </ul>
@@ -596,7 +623,7 @@
             <li class="h3">Dejanos tu CV</li>
         </ul>
         <a href="#header"><img src="img/flecha.png" alt="Flecha_arriba" class="flecha-arriba"></a>
-        <div class="footer4">
+        <div class="redes">
             <iconify-icon icon="akar-icons:instagram-fill" class="icono-redes"></iconify-icon>
             <iconify-icon icon="ph:twitch-logo-bold" class="icono-redes"></iconify-icon>
             <iconify-icon icon="icon-park-outline:twitter" class="icono-redes"></iconify-icon>
