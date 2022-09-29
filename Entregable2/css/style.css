@@ -113,11 +113,19 @@ div.nav + ul{
 }
 
 
-div.nav + ul a:last-child li{
+div.nav + ul li:last-child {
   background-color: #FECA65;
-  color: #2A2F3A;
   font-weight: 500;
 }
+
+
+
+
+div.nav + ul li:last-child a{
+    color: #2A2F3A;
+    padding: 0 80px 0;
+}
+
 
 div.nav + ul a:visited{
     color: #fffef8;
@@ -401,10 +409,17 @@ h4 {
         background-color: #2A2F3A;
     }
 
-    div.nav + ul a:last-child li:hover{
-        background-color: #d29315;
+    div.nav + ul li:last-child:hover{
+        background: rgba(210, 147, 21, 0.9);
+
+        
+    }
+    
+
+    div.nav + ul li:last-child a:hover{
         color: #fffef8;
     }
+
 
     /* redes header */
     header .redes{
