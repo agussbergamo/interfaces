@@ -70,7 +70,7 @@ h4 {
     height: 30px;
     width: 30px;
     position: absolute;
-    z-index: 500;
+    z-index: 1;
     left: 5px;
     display: none;
 }
@@ -79,7 +79,7 @@ h4 {
     height: 30px;
     width: 30px;
     position: absolute;
-    z-index: 500;
+    z-index: 1;
     right: 5px;
     display: none;
 }
@@ -269,11 +269,7 @@ h4 {
         cursor: pointer;
     }
 
-    div.nav + ul li:last-child:hover{
-        background: rgba(210, 147, 21, 0.9);
-
-        
-    }
+    
     
 
     div.nav + ul li:last-child a:hover{
@@ -307,10 +303,94 @@ h4 {
         color: #0e978f;
     }
 
+/* boton hero hover*/
+
+.btn-hero{
+    position: relative;
+    background: #FECA65;
+    
+}
+.btn-hero::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:linear-gradient(45deg,#fb0094,#00f,#0f0,
+    #ff0,#f00,#fb0094,#00f,#0f0,#ff0,#f00);
+    background-size: 400%;
+    opacity: 0;
+    transition: 0.5s;
+    animation: animate 20s linear infinite;
+  }
+
+.btn-hero::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:linear-gradient(45deg,#fb0094,#00f,#0f0,
+    #ff0,#f00,#fb0094,#00f,#0f0,#ff0,#f00);
+    background-size: 400%;
+    opacity: 0;
+    filter: blur(20px);
+    transition: 0.5s;
+    animation: animate 20s linear infinite;
+  }
+
+.btn-hero a{
+    position: absolute;
+    display: block;
+    top: 1px;
+    left: 1px;
+    right: 1px;
+    bottom: 1px;
+    text-align: center;
+    color: #fffef8;
+    transition: 0.5s;
+    z-index: 1;
+    color: rgba(255, 255, 255, 0.2);
+    background: #FECA65;
+  }
+    
+.btn-hero a:hover{
+    color: rgba(255, 255, 255, 1);
+    background: rgba(210, 147, 21, 0.9);
+}
 
 
-    
-    
+.btn-hero:hover::after,.btn-hero:hover::before{
+    opacity: 1;
+}
+
+.btn-hero a::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+  }
+.btn-hero span{
+    position: relative;
+    bottom: -4px;
+}
+
+@keyframes animate{
+    0%{
+      background-position: 0 0;
+    }
+    5%{
+      background-position: 300% 0;
+    }
+    100%{
+      background-position: 0 0;
+    }
+   }
+
 
     
 }
