@@ -89,6 +89,9 @@ header ul li{
     height: 25px;
 }
 
+.menu:hover{
+    cursor: pointer;
+}
  header .redes{
     display: none;
 }
@@ -407,6 +410,7 @@ h4 {
 
     div.nav + ul li:hover{
         background-color: #2A2F3A;
+        cursor: pointer;
     }
 
     div.nav + ul li:last-child:hover{
@@ -431,6 +435,7 @@ h4 {
     header ul li:hover{
         font-weight: 700;
         font-size: large;
+        cursor: pointer;
     }
 
     header ul{
