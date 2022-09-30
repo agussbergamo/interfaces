@@ -12,7 +12,6 @@ body{
 }
 
 /* overlay */
-
 .overlay{
     position: fixed; 
     width: 100%; 
@@ -25,7 +24,7 @@ body{
     z-index: 2; 
 }
 
-/* links*/
+/* links */
 a{
     text-decoration: none;
 }
@@ -33,13 +32,12 @@ a:visited{
     color: #fffef8;
 }
 
-/* clase para ocultar y mostrar*/
+/* clase para ocultar y mostrar */
 .ocultar{
     display: none;
 }
 
-/*Header*/
-
+/* Header */
 .header{
     display: flex; 
     align-items: center;
@@ -60,7 +58,6 @@ header ul{
 header ul.aumentar{
     width: 50%;
 }
-
 
 header ul li{
    background-color:#0E978F ; 
@@ -91,127 +88,6 @@ header ul li{
 
 .menu:hover{
     cursor: pointer;
-}
- header .redes{
-    display: none;
-}
-
-/*Nav*/
-
-.nav{
-    background-color: #0e978f;
-    height: 30px;
-    color: #fffef8;
-    font-family: 'Mohave', sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-div.nav + ul{
-    text-align: center;
-    font-family: 'Mohave', sans-serif;
-    color: #fffef8;
-    background-color: #0e978f;
-}
-
-
-div.nav + ul li:last-child {
-  background-color: #FECA65;
-  font-weight: 500;
-}
-
-
-
-
-div.nav + ul li:last-child a{
-    color: #2A2F3A;
-    padding: 0 80px 0;
-}
-
-
-div.nav + ul a:visited{
-    color: #fffef8;
-}
-
-
-/*Categorías*/
-
-h3, h4, p {
-    font-family: 'Mohave', sans-serif;
-    color: #fffef8;
-}
-
-h4 {
-    font-weight: lighter;
-    padding-top: 8px;
-}
-
-
-.categorias{
-    padding: 20px 30px 20px;
-}
-
-.carrusel{
-    display: flex;
-    align-items: center;    
-    overflow: hidden;
-    scroll-behavior:smooth;
-    flex-wrap: wrap;
-    gap: 15px;
-}
-
-.flecha-ant{
-    transform: rotate(180deg);
-    height: 30px;
-    width: 30px;
-    position: absolute;
-    z-index: 500;
-    left: 5px;
-    display: none;
-}
-
-.flecha-sig{
-    height: 30px;
-    width: 30px;
-    position: absolute;
-    z-index: 500;
-    right: 5px;
-    display: none;
-}
-
-.carrusel li{
-    background: #2A2F3A;
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.35);
-    border-radius: 20px;
-    padding: 15px;
-    height: 200px;
-    position: relative;
-}
-
-.tag-gratis{
-    width: 53px;
-    height: 20px;
-    position: absolute;
-    left: 0px;
-    top: 20px;
-}
-
-.estrella{
-    width: 12px;
-    height: 12px;
-}
-
-.estrellas{
-    position: absolute;
-    bottom: 20px;
-    left: 15px;
-}
-
-.precio{
-    position: absolute;
-    bottom: 20px;
-    right: 15px;
 }
 
 
@@ -272,192 +148,4 @@ h4 {
 
 .icono-redes{
     color: #fffef8;
-}
-
-/* botones*/
-
-.btn-jugar{
-    background-color:#77F4ED;
-    border-radius: 35px;
-    font-weight: 500;
-    width: 100px;
-    height: 40px;
-    font-family: 'Mohave';
-    font-size: larger;
-    transition-duration: 0.4s;
-    cursor: pointer;
-}
-
-/* btn.jugar hover*/
-
-.btn-jugar:hover{
-    background-color: #FECA65;
-}
-
-
-@media only screen and (min-width: 1024px) {
-   /* carrusel*/
-
-    .carrusel{
-        flex-wrap: nowrap;
-        gap: 35px;
-    }
-
-    ul.carrusel{
-        height: 275px;
-    }
-
-    ul.carrusel li{
-        min-width: 226px;
-        height: 254px;
-    }
-    .img-juego{
-        width: 100%;
-    }
-    .tag-gratis{
-        width: 90px;
-        height: 30px;
-    }
-
-    .carrusel h4{
-        font-size: 22px;
-    }
-
-    .carrusel p{
-        font-size: 20px;
-    }
-
-    .estrella{
-        height: 20px;
-        width: 20px;
-    }
-
-    h3{
-        font-size: 30px;
-    }
-
-    .flecha-ant, .flecha-sig{
-        height: 43px;
-        width: 43px;
-    }
-
-    .flecha-ant{
-        left: 25px;
-        display: block;
-    }
-
-    .flecha-sig{
-        right: 25px;
-        display: block;
-    }
-
-    .categorias{
-        padding: 20px 60px 20px; 
-    }
-
-    /* cards */
-
-    .btn-card{
-        width: 111px;
-        height: 42px;
-        border-radius: 35px;
-        background-color: #77F4ED;
-        font-family: 'Mohave', sans-serif;
-        font-weight: 500;
-        font-size: 30px;
-        position: absolute;
-        overflow: hidden;
-        transition: 0.5s;
-    }
-
-    .btn-card::before{
-        content: '';
-        position: absolute;
-        top: var(--y);
-        left: var(--x);
-        transform: translate(-50%,-50%);
-        width: 0px;
-        height: 0px;
-        background: #FECA65;
-        border-radius: 50%;
-        transition: width 0.5s, height 0.5s;
-       }
-
-       .btn-card:hover::before{
-        width: 300px;
-        height: 300px;
-       }
-
-       .btn-card span{
-        z-index: 1;
-        position: relative;
-       }
-   
-    /* nav */
-
-    div.nav{
-        display: none;
-    }
-    div.nav + ul{
-        display: flex;
-        justify-content: space-between;
-        font-size: 30px;
-    }
-    div.nav + ul li{
-        min-width: 16%;
-        padding: 5px 0 5px;
-    }
-
-    div.nav + ul li:hover{
-        background-color: #2A2F3A;
-        cursor: pointer;
-    }
-
-    div.nav + ul li:last-child:hover{
-        background: rgba(210, 147, 21, 0.9);
-
-        
-    }
-    
-
-    div.nav + ul li:last-child a:hover{
-        color: #fffef8;
-    }
-
-
-    /* redes header */
-    header .redes{
-        display: block;
-    }
-
-
-    /* menu hamburguesa*/
-    header ul li:hover{
-        font-weight: 700;
-        font-size: large;
-        cursor: pointer;
-    }
-
-    header ul{
-        width: 10%;
-    }
-
-    header ul.aumentar{
-        width: 25%;
-    }
-
-    
-   
-
-    .contenedor-btn-card{
-        display: flex;
-        justify-content: center;
-        position: relative;
-        bottom: -25px;
-    }
-
-    
-    
-
-    
 }
