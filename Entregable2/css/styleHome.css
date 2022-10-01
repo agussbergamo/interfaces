@@ -269,7 +269,7 @@ h4 {
     div.nav + ul li:hover{
         background: #2A2F3A url("../img/pixel3.png");
         transition-delay: 0.5s;
-        animation: animate2 0.4s steps(8) forwards;
+        animation: animate2 0.3s steps(8) forwards;
         background-size: 250px;
         cursor: pointer;
     }
