@@ -213,6 +213,7 @@ h4 {
         position: absolute;
         overflow: hidden;
         transition: 0.5s;
+        border: none;
     }
 
     .btn-card::before{
@@ -262,15 +263,26 @@ h4 {
     div.nav + ul li{
         min-width: 16%;
         padding: 5px 0 5px;
+        transition: 0.5s;
     }
 
     div.nav + ul li:hover{
-        background-color: #2A2F3A;
+        background: #2A2F3A url("../img/pixel3.png");
+        transition-delay: 0.5s;
+        animation: animate2 0.4s steps(8) forwards;
+        background-size: 250px;
         cursor: pointer;
     }
 
-    
-    
+    @keyframes animate2  {
+        0%{
+          background-position-y: 0;
+        }
+        100%{
+          background-position-y: -670px;
+        }
+      }
+
 
     div.nav + ul li:last-child a:hover{
         color: #fffef8;
@@ -302,6 +314,43 @@ h4 {
         background: #fffef8;
         color: #0e978f;
     }
+
+/* hover menu hamburguesa*/
+header ul li.animated-button::after {
+	content: "";
+	position: absolute;
+	height: 0%;
+	left: 50%;
+	top: 50%;
+	width: 150%;
+	z-index: -1;
+	transition: all 0.75s ease 0s;
+}
+header ul li:hover {
+	color: #0e978f;
+}
+header ul li:after {
+	height: 450%;
+}
+header ul li {
+	position: relative;
+	display: block;
+	color: #fff;
+	overflow: hidden;
+	transition: all 1s ease;
+}
+
+header ul li.animated-button {
+	z-index: 1;
+}
+header ul li.animated-button:after {
+	background: #fff;;
+	transform: translateY(-50%) translateX(-50%) rotate(90deg);
+}
+header ul li.animated-button:hover:after {
+	opacity: 1;
+	height: 800%;
+}
 
 /* boton hero hover*/
 
@@ -390,6 +439,10 @@ h4 {
       background-position: 0 0;
     }
    }
+
+
+
+
 
 
     

@@ -5,7 +5,7 @@ let filas = document.querySelectorAll(".carrusel");
 let derechas = document.querySelectorAll(".flecha-sig");
 let izquierdas = document.querySelectorAll(".flecha-ant");
 asignarFuncionFlechas();
-verificarScroll();
+/*verificarScroll();
 
 //ver de cambiar el style en linea con classList.add etc.
 function verificarScroll(elem) {
@@ -25,7 +25,7 @@ function verificarScroll(elem) {
         }
     }
     
-}
+}*/
 function asignarFuncionFlechas(params) {
     for (const flecha of derechas) {
         flecha.addEventListener("click",moverCarruselDer);
@@ -102,7 +102,7 @@ function mostrarBoton(params){
 /* hover btn card*/ 
 
 let botonesCard = document.querySelectorAll(".btn-card");
-console.log(botonesCard)
+
 
 for (const boton of botonesCard) {
     boton.addEventListener("mousemove",asignarHover)
@@ -112,17 +112,14 @@ function asignarHover(e) {
     let chords = this.getBoundingClientRect();
     let chorX = chords.left;
     let chorY = chords.top;
-    let x = e.pageX - chorX;
-    let y = e.pageY - chorY;
+    let x = e.clientX - chorX;
+    let y = e.clientY - chorY;
     this.style.setProperty('--x',x+'px');
     this.style.setProperty('--y',y+'px');
 }
-/*boton1.onmousemove = function(e){
-    let chords = boton1.getBoundingClientRect();
-    let chorX = chords.left;
-    let chorY = chords.top;
-    let x = e.pageX - chorX;
-    let y = e.pageY - chorY;
-    boton1.style.setProperty('--x',x+'px');
-    boton1.style.setProperty('--y',y+'px');
-}*/
+
+let btn4EnLineas = document.querySelector("#cuatroEnLineas");
+btn4EnLineas.addEventListener("click",()=> {
+    location.href = './dragones-en-linea.html';
+
+})
