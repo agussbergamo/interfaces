@@ -1,5 +1,28 @@
 "use strict"; 
 
+inicializar();
+/* pantalla de carga */
+let segundos = 0;
+function inicializar(params) {
+    setTimeout(cargaPagina,1000);
+    setTimeout(cargaPagina,2000);
+    setTimeout(cargaPagina,3000);
+    setTimeout(cargaPagina,4000);
+    setTimeout(cargaPagina,5000);
+    setTimeout(quitarPantallaCarga,5500); 
+}  
+function cargaPagina() {
+    segundos++;
+    let porcentaje = document.querySelector("#porcentaje");
+    porcentaje.innerHTML= segundos * 20;
+    
+}
+
+
+function quitarPantallaCarga(params) {
+    let divInicio = document.querySelector(".inicio");
+    divInicio.classList.toggle("ocultar");
+}
 
 let filas = document.querySelectorAll(".carrusel");
 let derechas = document.querySelectorAll(".flecha-sig");
