@@ -1,0 +1,165 @@
+/* Breadcrumbs */
+
+div.nav+ul {
+    text-align: center;
+    font-family: 'Mohave', sans-serif;
+    color: #fffef8;
+    background-color: #0e978f;
+    display: flex;
+    font-size: 30px;
+}
+
+div.nav+ul li {
+    padding: 5px 10px 5px;
+}
+
+/* Div info */
+
+.info img{
+    width: 100%;
+    height: 600px;
+}
+
+.info, .call-to-action{
+    font-family: 'Bahiana', cursive;
+    font-size: xx-large;
+    color: #fffef8;
+    align-items: center;
+}
+
+#texto-matrix{
+    width: 805px;
+    height: 151px;
+}
+
+/* Call to action */
+
+.call-to-action {
+    background-color: #2A2F3A;
+    width: 100%;
+    height: 220px;
+    display: flex; 
+    justify-content: center;
+}
+
+.call-to-action img {
+    width: 232px;
+    height: 200px;
+    align-self: flex-end;
+    margin-right: 20px;
+}
+
+.call-to-action div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.call-to-action p{
+    font-size: 50px;
+}
+
+.call-to-action button {
+    background-color: #85b27e;
+    border: solid;
+    border-color: black;
+    border-radius: 10px;
+    height: 60px;
+    width: 190px;
+    margin-top: 10px;
+    font-family: 'Bahiana', cursive;
+    font-size: larger;
+}
+
+
+/* Fondo animado */
+
+.fondo-animado :nth-child(1){
+    position: relative; 
+    z-index: 1; 
+    width: 100%;
+}
+
+.fondo-animado :nth-child(2){
+    position: relative; 
+    z-index: 2; 
+    width: 100%;
+}
+
+.fondo-animado :nth-child(3){
+    position: relative; 
+    z-index: 3; 
+    width: 50%;
+}
+
+.fondo-animado :nth-child(4){
+    position: relative; 
+    z-index: 4; 
+    width: 35%;
+}
+
+.fondo-animado :nth-child(5){
+    position: relative; 
+    z-index: 5; 
+    width: 100%;
+}
+
+/* Personajes */
+
+.personajes h3, .personajes p, .descripcion h3, .descripcion p, .features h3, .features p{
+    font-family: 'Mohave', sans-serif;
+    color: #fffef8;
+}
+
+.personajes div{
+    display: flex; 
+    justify-content: center;
+}
+
+.personajes img {
+    border-radius: 10px;
+    margin: 5px;
+}
+
+/* Descripcion */
+
+.descripcion {
+    margin: 10px 0px 10px; 
+}
+
+
+/* Features */
+
+.features div {
+    display: grid;
+    grid-template-areas: "f1 f2 f3"
+                        "f4 f5 f6";
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    justify-items: center;
+    margin: 10px 20% 10px; 
+}
+
+.features div:nth-child(1) {
+    grid-area: f1;
+}
+
+.features div:nth-child(2) {
+    grid-area: f2;
+}
+
+.features div:nth-child(3) {
+    grid-area: f3;
+}
+
+.features div:nth-child(4) {
+    grid-area: f4;
+}
+
+.features div:nth-child(5) {
+    grid-area: f5;
+}
+
+.features div:nth-child(6) {
+    grid-area: f6;
+}
