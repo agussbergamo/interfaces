@@ -88,46 +88,6 @@ div.nav+ul li:nth-child(odd):hover {
 
 /* Galeria */
 
-.galeria {
-    display: flex; 
-    width: 80%;
-}
-
-.galeria img{
-    margin: 3px;
-    height: 160px;
-    width: 190.8px;
-    border-color: #fffef8;
-    border-style: solid;
-    border-width: 1px;
-}
-
-.instrucciones{
-    margin: 100px;
-}
-
-.instrucciones div {
-    display: flex;
-    align-items: center;
-}
-
-p, h3 {
-    font-family: 'Mohave', sans-serif;
-    color: #fffef8;
-    padding-top: 20px;
-}
-
-h3{
-font-size: 30px;
-}
-
-p{
-    font-size: 20px;
-}
-
-
-/* galeria */
-
 .div-center-{
     width: 100%;
     text-align: center;
@@ -161,7 +121,7 @@ p{
     border: solid 5px black;
   }
 
-  .carousel figure:nth-child(1){transform: rotateY(0deg) translateZ(288px);}
+.carousel figure:nth-child(1){transform: rotateY(0deg) translateZ(288px);}
 .carousel figure:nth-child(2){ transform: rotateY(40deg) translateZ(288px);}
 .carousel figure:nth-child(3){ transform: rotateY(80deg) translateZ(288px);}
 .carousel figure:nth-child(4){ transform: rotateY(120deg) translateZ(288px);}
@@ -189,4 +149,82 @@ p{
   to{
       transform: rotateY(360deg);
   }
+}
+
+/* Instrucciones y comentarios */
+
+p, h3 {
+    font-family: 'Mohave', sans-serif;
+    color: #fffef8;
+}
+
+h3{
+    font-size: 30px;
+    margin: 10px;
+}
+
+p{
+    font-size: 20px;
+}
+
+.instrucciones, .input-comentario, .comentarios{
+    margin: 40px 100px 40px;
+}
+
+.instrucciones div, .input-comentario div {
+    display: flex;
+    align-items: center;
+}
+
+.input-comentario input{
+    border-radius: 5px;
+    border-color: #2a2f3a;
+    border-width: 1px;
+    height: 40px;
+    width: 90%;
+}
+
+.input-comentario input::placeholder{
+    font-family: 'Mohave';
+    font-size: medium;
+    padding-left: 10px;
+}
+
+.input-comentario button {
+    background-color: #77F4ED;
+    border-radius: 20px;
+    font-weight: 500;
+    width: 80px;
+    height: 30px;
+    font-family: 'Mohave';
+    font-size: large;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.input-comentario button:hover {
+    background-color: #FECA65;
+}
+
+.comentarios h3{
+    text-align: center;
+}
+
+.comentarios div{
+    background-color: #fffef8;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.comentarios p{
+    color: #2a2f3a;
+    font-size: medium; 
+    padding: 8px;
+}
+
+.nombre{
+    font-weight: bolder;
+    border-bottom: solid;
+    border-color: #2a2f3a;
+    border-width: 1px;
 }
