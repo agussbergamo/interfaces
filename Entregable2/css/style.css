@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -6,47 +6,58 @@
     scroll-behavior: smooth;
 }
 
-body{
-    background-color: #434E68; 
-    height: 100%;   
+body {
+    background-color: #434E68;
+    height: 100%;
 }
 
-/* overlay */
-.overlay{
-    position: fixed; 
-    width: 100%; 
-    height: 100%; 
+/* Overlay */
+
+.overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0,0,0,0.5);
-    z-index: 2; 
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2;
 }
 
-/* links */
-a{
+/* Links */
+
+a {
     text-decoration: none;
 }
-a:visited{
+
+a:visited {
     color: #fffef8;
 }
 
-/* clase para ocultar y mostrar */
-.ocultar{
+/* Clase para ocultar y mostrar */
+
+.ocultar {
     display: none;
 }
 
 /* Header */
-.header{
-    display: flex; 
+
+.header {
+    display: flex;
     align-items: center;
     background-color: #2A2F3A;
     height: 100px;
-    justify-content: space-around;
+    justify-content: space-between;
+    padding: 20px;
 }
 
-header ul{
+.header div{
+    display: flex;
+    align-items: center;
+}
+
+header ul {
     position: absolute;
     top: 80px;
     right: 3px;
@@ -55,30 +66,32 @@ header ul{
     transition: all 0.5s;
 }
 
-header ul.aumentar{
+header ul.aumentar {
     width: 50%;
 }
 
-header ul li{
-   background-color:#0E978F ; 
-   color:#fffef8;
-   font-family: 'Mohave', sans-serif;
-   font-weight: 600;
-   margin-top: 4px;
-   text-align: center;
-   padding: 5px;
+header ul li {
+    background-color: #0E978F;
+    color: #fffef8;
+    font-family: 'Mohave', sans-serif;
+    font-weight: 600;
+    margin-top: 4px;
+    text-align: center;
+    padding: 5px;
 }
 
 .logo {
     width: 56px;
     height: 50px;
+    cursor: pointer; 
 }
 
-.texto-header{
+.texto-header {
     font-family: 'Monofett';
     color: #fffef8;
     font-size: 6ex;
     font-weight: bolder;
+    margin: 15px;
 }
 
 .menu {
@@ -86,68 +99,124 @@ header ul li{
     height: 25px;
 }
 
-.menu:hover{
+.menu:hover {
     cursor: pointer;
 }
 
 
 /*Footer*/
 
-.footer{
+.footer {
     height: 150px;
     padding: 20px;
     position: relative;
-    bottom: 0px; 
+    bottom: 0px;
     width: 100%;
     background-color: #2A2F3A;
-    display: grid; 
-    grid-template-areas: "footer1 footer2 footer3"
-                         "flecha-arriba redes redes";
-    grid-template-columns: 1fr 1fr 1fr;
+    display: grid;
+    grid-template-areas: "footer1 footer2 footer3 footer4"
+        "flecha-arriba . . footer-redes";
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 3fr 1fr;
-    justify-items: center;   
+    justify-items: center;
 
 }
 
-.footer1{
+.footer1 {
     grid-area: footer1;
+    cursor: pointer;
 }
 
-.footer2{
+.footer2 {
     grid-area: footer2;
+    cursor: pointer;
 }
 
-.footer3{
+.footer3 {
     grid-area: footer3;
+    cursor: pointer;
 }
 
-.redes{
-    grid-area: redes;
+.footer4 {
+    grid-area: footer4;
+    cursor: pointer;
 }
 
-.flecha-arriba{
+.footer-redes {
+    grid-area: footer-redes;
+    cursor: pointer;
+}
+
+.flecha-arriba {
     grid-area: flecha-arriba;
     width: 15px;
     height: 15px;
     transform: rotate(270deg);
 }
 
-.h2, .h3{
+.h2,
+.h3 {
     font-family: 'Mohave', sans-serif;
     color: #fffef8;
-    font-size: small;
 }
 
-.h2{
+.h2 {
     font-weight: 600;
+    font-size: 10px;
 }
 
-.h3{
+.h3 {
     font-weight: 400;
+    font-size: 10px;
 }
 
-.icono-redes{
+.icono-redes {
     color: #fffef8;
 }
 
+@media only screen and (min-width: 1024px) {
 
+    /* Header */
+
+    .header {
+        display: flex;
+        align-items: center;
+        background-color: #2A2F3A;
+        height: 100px;
+        justify-content: space-between;
+    }
+
+    .texto-header{
+        font-size: 8ex;
+    }
+
+    /* redes header */
+
+    header div .redes {
+        display: block;
+        margin: 20px;
+        cursor: pointer;
+    }
+
+    /*Footer*/
+
+    .footer {
+        height: 200px;
+        padding: 20px 50px 20px;
+    }
+
+    .h2 {
+        font-size: 18px;
+    }
+
+    .h3 {
+        font-size: 15px;
+    }
+
+    .flecha-arriba {
+        width: 20px;
+        height: 20px;
+    }
+
+
+}
