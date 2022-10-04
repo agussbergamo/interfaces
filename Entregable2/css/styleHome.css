@@ -17,7 +17,7 @@
 }
 
 .inicio h1,h2{
-    color:#fffef8;
+    color:#77F4ED;
 }
 
 .inicio.ocultar{
@@ -34,7 +34,7 @@
     position: absolute;
     width: 6px;
     height: 6px;
-    background: #fffef8;
+    background: #77F4ED;
     border-radius: 50%;
     animation: lds-default 1.2s linear infinite;
   }
