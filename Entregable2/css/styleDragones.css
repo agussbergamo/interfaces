@@ -94,7 +94,7 @@ div.nav+ul li:nth-child(odd):hover {
   }
   
   .gallery {
-    margin: 10% auto;
+    margin: 6% auto 10%;
     width: 210px;
     height: 140px;
     position: relative;
@@ -118,7 +118,7 @@ div.nav+ul li:nth-child(odd):hover {
     left: 10px;
     top: 10px;
     background: black;
-    border: solid 5px black;
+    border: solid 1px #fffef8;
   }
 
 .carousel figure:nth-child(1){transform: rotateY(0deg) translateZ(288px);}

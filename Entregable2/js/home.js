@@ -115,10 +115,13 @@ for (const card of cards) {
 }
 
 function mostrarBoton(params){
-    let info = this.querySelector(".contenedor-info");
-    info.classList.toggle("ocultar");
-    let boton = this.querySelector(".btn-card")
-    boton.classList.toggle("ocultar");
+    if(window.innerWidth> 600){
+        let info = this.querySelector(".contenedor-info");
+        info.classList.toggle("ocultar");
+        let boton = this.querySelector(".btn-card")
+        boton.classList.toggle("ocultar");
+    }
+    
 }
 
 
