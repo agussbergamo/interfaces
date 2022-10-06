@@ -28,26 +28,28 @@ let filas = document.querySelectorAll(".carrusel");
 let derechas = document.querySelectorAll(".flecha-sig");
 let izquierdas = document.querySelectorAll(".flecha-ant");
 asignarFuncionFlechas();
-//verificarScroll();
+verificarScroll();
 
 //ver de cambiar el style en linea con classList.add etc.
-/*function verificarScroll(elem) {
-    console.log(elem)
+function verificarScroll(elem) {
     if(elem){
-        console.log(elem.parentElement.scrollLeft)
-        if(elem.parentElement.scrollLeft==0){
-            elem.style.visibility = "hidden";
-        }else{
-            elem.style.visibility = "visible";
+        let flechaIzq = elem.querySelector(".flecha-ant");
+        let flechaDer = elem.querySelector(".flecha-sig");
+        if(elem.scrollLeft==0){
+            flechaIzq.classList.add("disabled");
+        }  else if(elem.scrollLeft+elem.offsetWidth >= elem.scrollWidth){
+            flechaDer.classList.add("disabled");
         }
-    
-        if(elem.parentElement.scrollLeft==(elem.parentElement.scrollWidth-elem.parentElement.offsetWidth)){
-            elem.style.visibility = "hidden";
-        }else{
-            elem.style.visibility = "visible";
+        else{
+            flechaDer.classList.remove("disabled");
+            flechaIzq.classList.remove("disabled");
         }
-    }  
-}*/
+    }else{
+        for (const izq of izquierdas) {
+            izq.classList.add("disabled");
+        }
+    } 
+}
 
 function asignarFuncionFlechas(params) {
     for (const flecha of derechas) {
@@ -57,13 +59,24 @@ function asignarFuncionFlechas(params) {
         flecha.addEventListener("click",moverCarruselIzq)
     }
 }
+
 function moverCarruselDer(params) {
-    this.parentElement.scrollLeft += 530;
-   //setTimeout(verificarScroll,1000, this);
+    let ul = this.parentElement;
+    if(!this.classList.contains("disabled")){
+        this.parentElement.scrollLeft += 530;
+        setTimeout(verificarScroll,400, ul);
+    }
+    
+    
+   
 }
 function moverCarruselIzq(params) {
-    this.parentElement.scrollLeft -= 530;
-   //setTimeout(verificarScroll, 1000, this);
+    let ul = this.parentElement;
+    if(!this.classList.contains("disabled")){
+        this.parentElement.scrollLeft -= 530;
+   setTimeout(verificarScroll, 400, ul);
+    }
+    
 }
 
 /* menu categorias desplegable */ 
