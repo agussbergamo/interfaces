@@ -172,6 +172,9 @@ header ul li {
 
 .icono-redes {
     color: #fffef8;
+    height: 12px;
+    width: 12px;
+    margin: 1px;
 }
 
 @media only screen and (min-width: 1024px) {
@@ -196,6 +199,11 @@ header ul li {
         display: block;
         margin: 20px;
         cursor: pointer;
+    }
+
+    .icono-redes {
+        height: 25px;
+        width: 25px;
     }
 
     /*Footer*/

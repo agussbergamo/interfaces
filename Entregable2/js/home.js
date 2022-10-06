@@ -1,8 +1,8 @@
 "use strict"; 
 
-inicializar();
+//inicializar();
 /* pantalla de carga */
-let segundos = 0;
+/*let segundos = 0;
 function inicializar(params) {
     setTimeout(cargaPagina,1000);
     setTimeout(cargaPagina,2000);
@@ -22,16 +22,16 @@ function cargaPagina() {
 function quitarPantallaCarga(params) {
     let divInicio = document.querySelector(".inicio");
     divInicio.classList.toggle("ocultar");
-}
+}*/
 
 let filas = document.querySelectorAll(".carrusel");
 let derechas = document.querySelectorAll(".flecha-sig");
 let izquierdas = document.querySelectorAll(".flecha-ant");
 asignarFuncionFlechas();
-/*verificarScroll();
+//verificarScroll();
 
 //ver de cambiar el style en linea con classList.add etc.
-function verificarScroll(elem) {
+/*function verificarScroll(elem) {
     console.log(elem)
     if(elem){
         console.log(elem.parentElement.scrollLeft)
@@ -46,9 +46,9 @@ function verificarScroll(elem) {
         }else{
             elem.style.visibility = "visible";
         }
-    }
-    
+    }  
 }*/
+
 function asignarFuncionFlechas(params) {
     for (const flecha of derechas) {
         flecha.addEventListener("click",moverCarruselDer);
@@ -59,13 +59,12 @@ function asignarFuncionFlechas(params) {
 }
 function moverCarruselDer(params) {
     this.parentElement.scrollLeft += 530;
-   setTimeout(verificarScroll(this),1000);
+   //setTimeout(verificarScroll,1000, this);
 }
 function moverCarruselIzq(params) {
     this.parentElement.scrollLeft -= 530;
-   setTimeout(verificarScroll(this),1000) ;
+   //setTimeout(verificarScroll, 1000, this);
 }
-
 
 /* menu categorias desplegable */ 
 
