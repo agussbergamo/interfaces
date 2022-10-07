@@ -35,6 +35,7 @@ function verificarScroll(elem) {
     if(elem){
         let flechaIzq = elem.querySelector(".flecha-ant");
         let flechaDer = elem.querySelector(".flecha-sig");
+        console.log(elem.scrollLeft)
         if(elem.scrollLeft==0){
             flechaIzq.classList.add("disabled");
         }  else if(elem.scrollLeft+elem.offsetWidth >= elem.scrollWidth){
@@ -64,7 +65,7 @@ function moverCarruselDer(params) {
     let ul = this.parentElement;
     if(!this.classList.contains("disabled")){
         this.parentElement.scrollLeft += 530;
-        setTimeout(verificarScroll,400, ul);
+        setTimeout(verificarScroll,450, ul);
     }
     
     
@@ -74,7 +75,7 @@ function moverCarruselIzq(params) {
     let ul = this.parentElement;
     if(!this.classList.contains("disabled")){
         this.parentElement.scrollLeft -= 530;
-   setTimeout(verificarScroll, 400, ul);
+   setTimeout(verificarScroll, 450, ul);
     }
     
 }
