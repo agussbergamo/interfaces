@@ -164,14 +164,52 @@ div.nav+ul li {
 
 /* Personajes */
 
-.personajes div{
+.personajes{
     display: flex; 
-    justify-content: center;
+    justify-content: space-between;
 }
 
 .personajes img {
     border-radius: 10px;
     margin: 5px;
+}
+
+.personaje{
+    position: relative;
+    width: 423px;
+    height: 485px;
+}
+
+.personaje img{
+    position: absolute; 
+    z-index: 1;
+}
+
+.personaje div{
+    position: absolute;
+    z-index: 2;
+    width: 423px;
+    padding: 70px 45px 70px;
+}
+
+.personaje div p{
+    font-size: 40px;
+    padding: 10px 0px 10px;
+    text-align: center;
+}
+
+/*ACOMODAR ESTO, CON .PERSONAJE DIV+P NO FUNCIONA*/ 
+.nombre{
+    border-bottom: solid 1px #fffef8;
+}
+
+.personaje div ul li{
+    font-size: 30px;
+    list-style: inside;
+}
+
+.blur{
+    filter: blur(5px);
 }
 
 
