@@ -57,6 +57,7 @@ div.nav+ul li:nth-child(odd):hover {
     width: 30px;
     height: 30px;
     margin: 5px;
+    cursor: pointer;
 }
 
 .iconos {
@@ -70,6 +71,7 @@ div.nav+ul li:nth-child(odd):hover {
 .btn-jugar {
     background-color: #77F4ED;
     border-radius: 35px;
+    border: none;
     font-weight: 500;
     width: 100px;
     height: 40px;
@@ -193,6 +195,7 @@ p{
 .input-comentario button {
     background-color: #77F4ED;
     border-radius: 20px;
+    border: none;
     font-weight: 500;
     width: 80px;
     height: 30px;
@@ -222,9 +225,21 @@ p{
     padding: 8px;
 }
 
-.nombre{
+.comentarios div p:first-child{
     font-weight: bolder;
     border-bottom: solid;
     border-color: #2a2f3a;
     border-width: 1px;
+}
+
+.comentarios>p{
+    color: #fffef8;
+    text-align: center;
+}
+
+.comentarios div:last-child{
+    display: flex;
+    justify-content: center;
+    background-color: #2a2f3a;
+    cursor: pointer;
 }

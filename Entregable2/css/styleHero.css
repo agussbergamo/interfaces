@@ -94,6 +94,7 @@ div.nav+ul li {
     margin-top: 10px;
     font-family: 'Bahiana', cursive;
     font-size: larger;
+    cursor: pointer;
 }
 
 
@@ -198,8 +199,7 @@ div.nav+ul li {
     text-align: center;
 }
 
-/*ACOMODAR ESTO, CON .PERSONAJE DIV+P NO FUNCIONA*/ 
-.nombre{
+.habilidades p:first-child{
     border-bottom: solid 1px #fffef8;
 }
 

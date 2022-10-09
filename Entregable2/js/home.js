@@ -30,7 +30,7 @@ let izquierdas = document.querySelectorAll(".flecha-ant");
 asignarFuncionFlechas();
 verificarScroll();
 
-//ver de cambiar el style en linea con classList.add etc.
+
 function verificarScroll(elem) {
     if(elem){
         let flechaIzq = elem.querySelector(".flecha-ant");
@@ -66,9 +66,7 @@ function moverCarruselDer(params) {
     if(!this.classList.contains("disabled")){
         this.parentElement.scrollLeft += 530;
         setTimeout(verificarScroll,450, ul);
-    }
-    
-    
+    } 
    
 }
 function moverCarruselIzq(params) {
@@ -89,34 +87,6 @@ function mostrarCategorias(params) {
     let listaCategorias = document.querySelector("#lista-categorias");
     listaCategorias.classList.toggle("ocultar");
 }
-
-/* overlay y menu hamburguesa */
-
-let overlay = document.querySelector("#overlay");
-let menu = document.querySelector("#menu-hamburguesa");
-overlay.addEventListener("click",()=>{
-    overlay.classList.toggle("ocultar");
-    menu.classList.toggle("aumentar");
-    setTimeout(ocultar,400);
-})
-
-let btnHamburguesa = document.querySelector("#btn-hamburguesa");
-btnHamburguesa.addEventListener("click", desplegarMenu);
-
-function desplegarMenu(params) {
-    menu.classList.toggle("ocultar");
-    setTimeout(aumentar, 1);
-    overlay.classList.toggle("ocultar");
-}
-
-function aumentar(params) {
-    menu.classList.toggle("aumentar");
-}
-
-function ocultar(params) {
-    menu.classList.toggle("ocultar");
-}
-
 
 /*hover card*/
 

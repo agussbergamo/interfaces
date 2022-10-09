@@ -412,63 +412,6 @@ h4 {
     }
 
 
-    /* menu hamburguesa*/
-    header ul{
-        width: 10%;
-    }
-
-    header ul.aumentar{
-        width: 25%;
-    }
-
-    header ul li{
-        font-size: x-large;
-        padding: 8px;
-    }
-
-    header ul li:hover{
-        cursor: pointer;
-        background: #fffef8;
-        color: #0e978f;
-    }
-
-/* hover menu hamburguesa*/
-header ul li.animated-button::after {
-	content: "";
-	position: absolute;
-	height: 0%;
-	left: 50%;
-	top: 50%;
-	width: 150%;
-	z-index: -1;
-	transition: all 0.75s ease 0s;
-}
-header ul li:hover {
-	color: #0e978f;
-}
-header ul li:after {
-	height: 450%;
-}
-header ul li {
-	position: relative;
-	display: block;
-	color: #fff;
-	overflow: hidden;
-	transition: all 1s ease;
-}
-
-header ul li.animated-button {
-	z-index: 1;
-}
-header ul li.animated-button:after {
-	background: #fff;;
-	transform: translateY(-50%) translateX(-50%) rotate(90deg);
-}
-header ul li.animated-button:hover:after {
-	opacity: 1;
-	height: 800%;
-}
-
 /* boton hero hover*/
 
 .btn-hero{
