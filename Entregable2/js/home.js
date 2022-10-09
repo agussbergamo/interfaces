@@ -1,8 +1,9 @@
 "use strict"; 
 
-//inicializar();
+inicializar();
+
 /* pantalla de carga */
-/*let segundos = 0;
+let segundos = 0;
 function inicializar(params) {
     setTimeout(cargaPagina,1000);
     setTimeout(cargaPagina,2000);
@@ -15,14 +16,12 @@ function cargaPagina() {
     segundos++;
     let porcentaje = document.querySelector("#porcentaje");
     porcentaje.innerHTML= segundos * 20;
-    
 }
-
 
 function quitarPantallaCarga(params) {
     let divInicio = document.querySelector(".inicio");
     divInicio.classList.toggle("ocultar");
-}*/
+}
 
 let filas = document.querySelectorAll(".carrusel");
 let derechas = document.querySelectorAll(".flecha-sig");
