@@ -23,15 +23,10 @@ let jugadorDeTurno;
 let botones = document.querySelectorAll(".btn-modalidad");
 
 
-//
 
-function mostrarTiempo(){
-   if(tiempo>0){
-      tiempo--;
-      actualizar();
-      
-   }
-}
+inicializarEventos();
+
+
 
 
 botones.forEach(b=>{
@@ -54,16 +49,29 @@ b.addEventListener("click",event=>{
    if(intervalo){
       clearInterval(intervalo);
    }
-   
-   intervalo = setInterval(mostrarTiempo,1000);
+   intervalo = setInterval(DisminuirTiempo,1000);
 })
 })
 
 
+function DisminuirTiempo(){
+   if(tiempo>0){
+      tiempo--;
+      actualizar();
+      
+   }
+}
 
-inicializarEventos();
 
-
+function mostrarTiempoTransformado(){
+   let minutes = Math.floor(tiempo/60);
+   let segundos = tiempo % 60;
+   minutes = minutes < 10 ? "0" + minutes : minutes;
+   segundos = segundos < 10 ? "0" + segundos : segundos;
+   ctx.font = "30px Arial";
+   ctx.fillStyle = "white";
+   ctx.fillText(`${minutes} : ${segundos}`, 425, 50); 
+}
 
 
 function actualizar(){
@@ -71,9 +79,10 @@ function actualizar(){
    ctx.drawImage(imageFondo,0,0,canvas.width,canvas.height)
    tablero.dibujar(1,filas);
    dibujarFichas(1);
-   ctx.font = "30px Arial";
+   mostrarTiempoTransformado()
+   /*ctx.font = "30px Arial";
       ctx.fillStyle = "white";
-      ctx.fillText(`${tiempo}`, 450, 50);
+      ctx.fillText(`${tiempo}`, 450, 50);*/
 }
 
 function cargarJugadores(){
