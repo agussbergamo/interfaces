@@ -208,8 +208,8 @@ function mouseMove(params) {
 
 let ficha1 = document.querySelectorAll(".ficha1ASelec");
 let ficha2 = document.querySelectorAll(".ficha2ASelec");
-let imageSelected = "img/dragon1.png";
-let imageSelected2 = "img/dragon2.png";
+let imageSelected;
+let imageSelected2;
 
 
 ficha1.forEach(f => f.addEventListener("click", ()=>{
@@ -248,8 +248,11 @@ btnDesc.addEventListener("click",() =>{
 
 let btnJugar = document.querySelector("#btn-jugar");
 btnJugar.addEventListener("click",() =>{
-   contenedorJuego.classList.add("ocultar");
-   canvasContainer.classList.remove("ocultar");
+   if(imageSelected && imageSelected2){
+      contenedorJuego.classList.add("ocultar");
+      canvasContainer.classList.remove("ocultar");
+   }
+   
 })
 
 let contenedorFichas = document.querySelector("#contenedor-fichas");
