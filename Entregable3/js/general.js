@@ -70,7 +70,7 @@ function mostrarTiempoTransformado(){
    segundos = segundos < 10 ? "0" + segundos : segundos;
    ctx.font = "30px Arial";
    ctx.fillStyle = "white";
-   ctx.fillText(`${minutes} : ${segundos}`, 425, 50); 
+   ctx.fillText(`${minutes} : ${segundos}`, 410, 50); 
 }
 
 
@@ -118,7 +118,7 @@ function crearFichas(totalfichas) {
       let x;
       let y;
       let img = new Image();
-      img.src = "./img/dragon1.png";
+      img.src = `./${imageSelected}`;
       if(i<13){
           x = 15;
           y = i* 50 + 30;
@@ -143,7 +143,7 @@ function crearFichas(totalfichas) {
       let x;
       let y;
       let img = new Image();
-      img.src = "./img/dragon2.png";
+      img.src = `./${imageSelected2}`;
       if(i<13){
           x = canvas.offsetWidth - 55;
           y = i* 50 + 30;
@@ -204,3 +204,55 @@ function mouseMove(params) {
    
 }
 
+/*  Seleccion de fichas   */ 
+
+let ficha1 = document.querySelectorAll(".ficha1ASelec");
+let ficha2 = document.querySelectorAll(".ficha2ASelec");
+let imageSelected = "img/dragon1.png";
+let imageSelected2 = "img/dragon2.png";
+
+
+ficha1.forEach(f => f.addEventListener("click", ()=>{
+   ficha1.forEach(fi=> fi.classList.remove("selected"))
+   f.classList.add("selected");
+   imageSelected = f.dataset.src;
+   verificarSeleccionadas(ficha2,imageSelected);
+}))
+
+ficha2.forEach(f => f.addEventListener("click", ()=>{
+   ficha2.forEach(fi=> fi.classList.remove("selected"))
+   f.classList.add("selected");
+   imageSelected2 = f.dataset.src;
+   verificarSeleccionadas(ficha1,imageSelected2);
+}))
+
+function verificarSeleccionadas(fichas,image) {
+   fichas.forEach(function(f){
+      if(f.dataset.src == image  ){
+         f.style.visibility = "hidden";
+      }else{
+         f.style.visibility ="visible";
+      }
+   })
+}
+
+
+/* ocultamiento y mostrar canva*/ 
+
+
+let btnDesc = document.querySelector("#btn-descripcion");
+btnDesc.addEventListener("click",() =>{
+   contenedorDescripcion.classList.add("ocultar");
+   contenedorFichas.classList.remove("ocultar");
+})
+
+let btnJugar = document.querySelector("#btn-jugar");
+btnJugar.addEventListener("click",() =>{
+   contenedorJuego.classList.add("ocultar");
+   canvasContainer.classList.remove("ocultar");
+})
+
+let contenedorFichas = document.querySelector("#contenedor-fichas");
+let contenedorDescripcion = document.querySelector("#contenedor-descripcion");
+let canvasContainer = document.querySelector(".canva-container");
+let contenedorJuego = document.querySelector(".contenedor-juego");
