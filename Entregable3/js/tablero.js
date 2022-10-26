@@ -2,6 +2,7 @@
 
 class Tablero {
 
+    //Constructor de la clase 
     constructor(canvas,ctx,cuadrilla,verificar){
           this.canvas = canvas;
           this.ctx = ctx;
@@ -9,6 +10,7 @@ class Tablero {
           this.numAVerificar = verificar;    
     }
 
+    //Crea un tablero según el juego seleccionado (4, 5, 6 o 7 en línea)
     inicializar(filas){
         let xInit;
         let yInit;
@@ -37,13 +39,13 @@ class Tablero {
                 let y = yInit + i*50;
                 let img = new Image();
                 img.src =  "./img/4-in-a-row.png";
-                cuadrilla[i][j] = new tableroSpot(x,y,img,this.ctx);
-                
-             }
-         
+                cuadrilla[i][j] = new tableroSpot(x,y,img,this.ctx);   
+             }     
       } 
     }
 
+    //Dibuja el tablero
+    //La primera fila queda no visible, es donde se van a soltar las fichas
     dibujar(n,filas){
         for (let i = filas; i >= -1; i--) {
              for (let j = filas+1; j >= 0; j--) {
@@ -52,14 +54,12 @@ class Tablero {
                     cuadrilla[i][j].draw();
                 }else{
                     cuadrilla[i][j].drawImage(n);
-                }
-                
-                
-             }
-         
+                }       
+             }  
       } 
     }
 
+    //Determina si la posición donde fue soltada la ficha es válida para colocarla en el tablero
     verificarColocable(ficha){
         if(!ficha.colocada && ficha.selected){
             ficha.selected =false;
@@ -75,10 +75,9 @@ class Tablero {
             ficha.x = ficha.xInicial;
             ficha.y = ficha.yInicial;           
         }
-        
-       
     }
 
+    //Determina la posición donde debe quedar colocada la ficha
     completarColumna(col,ficha){
         for (let i = cuadrilla.length-1; i >=0 ; i--) {
             const fila = cuadrilla[i];
@@ -96,16 +95,19 @@ class Tablero {
             }else{
                 ficha.colocada=false;
             }
-            
         }
     }
 
+    //Verifica si la ficha colocada completa el "x en línea"
+    //Se verifica de manera horizontal, vertical y diagonal 
     verificarGanador(i,n){
         if(this.verifH(i,n) || this.verifV(i,n) || this.verifD(i,n)){
             console.log("gano" + jugadorDeTurno.nombre)
         }
     }
 
+    //Verifica de manera horizontal si se acumularon x en línea
+    //Se recorre hacia izquierda y derecha a partir de la posición de la ficha, y se suman 
     verifH(i,n){
         let fichasEnLinea = 1;
         let fila = cuadrilla[i];
@@ -114,8 +116,7 @@ class Tablero {
                 fichasEnLinea++;
             }else{
                 break;
-            }
-            
+            }  
         }
 
         for (let index = n-1; index >=0 ; index--) {
@@ -134,6 +135,8 @@ class Tablero {
 
     }
 
+    //Verifica de manera vertical si se acumularon x en línea
+    //Se recorre hacia arriba y abajo a partir de la posición de la ficha, y se suman 
     verifV(i,n){
         let fichasEnLinea = 1;
         for (let index = i+1; index < cuadrilla.length; index++) {
@@ -141,8 +144,7 @@ class Tablero {
                 fichasEnLinea++;
             }else{
                 break;
-            }
-            
+            }   
         }
         for (let index = i-1; index >=0 ; index--) {
             if(cuadrilla[index][n].jugador ==jugadorDeTurno.nombre){
@@ -157,9 +159,10 @@ class Tablero {
         }else{
             return false;
         }
-
     }
 
+    //Verifica de manera diagonal si se acumularon x en línea
+    //Se recorren las dos diagonales y se suman
     verifD(i,n){
         let fichasEnLinea = 1;
         fichasEnLinea+= this.verifDiagUno(i,n);
@@ -173,23 +176,16 @@ class Tablero {
             if(fichasEnLinea>=this.numAVerificar){
                 return true;
             }
-
         }
-        
-        
-        
-    
-
     }
 
+    //Recorre la diagonal 1
+    //Suma las fichas iguales hacia abajo-derecha y hacia arriba-izquierda a partir de la posición de la ficha
     verifDiagUno(i,n){
         let fichas = this.verifDAbajoDer(i+1,n+1);
         fichas+= this.verifDArribaIzq(i-1,n-1);
-
         return fichas;
     }
-
-
 
     verifDAbajoDer(i,n){
         if(i >=this.cuadrilla.length || n >= this.cuadrilla[0].length){
@@ -198,8 +194,7 @@ class Tablero {
             return 0;
         }else{
             return 1 + this.verifDAbajoDer(i+1,n+1)
-        }
-      
+        }   
     }
 
     verifDArribaIzq(i,n){
@@ -212,10 +207,11 @@ class Tablero {
         }
     }
 
+    //Recorre la diagonal 1
+    //Suma las fichas iguales hacia arriba-derecha y hacia abajo-izquierda a partir de la posición de la ficha
     verifDiagDos(i,n){
         let fichas = this.verifDArribaoDer(i-1,n+1);
         fichas+= this.verifDAbajoIzq(i+1,n-1);
-
         return fichas; 
     }
 
@@ -238,5 +234,4 @@ class Tablero {
             return 1 + this.verifDAbajoIzq(i+1,n-1)
         } 
     }
-
 }

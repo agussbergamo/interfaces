@@ -1,6 +1,6 @@
 class tableroSpot{
     
-    
+    //Constructor de la clase 
     constructor(x,y,img,ctx){
         this.ocupado = false;
         this.x = x;
@@ -12,14 +12,17 @@ class tableroSpot{
         this.jugador;
     }
     
-
+    //Devuelve la coordenada x del tableroSpot
     getX(){
         return this.x;
     }
+
+    //Devuelve la coordenada y del tableroSpot 
     getY(){
         return this.y;
     }
     
+    //Crea el tableroSpot oculto arriba de la primera fila, donde se van a soltar las fichas
     draw(){
         this.ctx.beginPath();
         this.ctx.arc(this.x+this.width/2,this.y+this.width/2,this.width/2,0.34,2.79)
@@ -36,6 +39,7 @@ class tableroSpot{
         ctx.restore();*/
     }
 
+    //Dibuja un tableroSpot
     drawImage(n){
         let ctx = this.ctx;
         let img = this.img;
@@ -50,8 +54,6 @@ class tableroSpot{
         }
         
     }
-
-   
 }
 
 

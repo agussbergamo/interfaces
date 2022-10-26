@@ -2,6 +2,7 @@
 
 class Ficha  {
 
+    //Constructor de la clase 
     constructor(x,y,img,jugador){
         this.x = x
         this.y = y;
@@ -13,7 +14,7 @@ class Ficha  {
         this.jugador = jugador.nombre;
     }
 
-
+    //Dibuja la ficha
     draw(ctx,n){
         let x = this.x;
         let y = this.y;
@@ -53,6 +54,7 @@ class Ficha  {
 
     }
 
+    //Verifica si en la posición donde fue clickeado el mouse hay una ficha
     verificarSelect(e,x,y){
         if(!this.selected && this.jugador == jugadorDeTurno.nombre){
             let xCursor = e.clientX - x;
@@ -71,10 +73,10 @@ class Ficha  {
         }else{
             this.selected = false;
         }*/
-        }
-        
+        }    
     }
 
+    //Corrige la posición del mouse para que se desplace la ficha desde el centro  
     actualizarPos(x,y){
         if(this.selected && !this.colocada){
             this.x= x-22;

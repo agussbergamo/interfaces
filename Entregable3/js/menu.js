@@ -1,6 +1,6 @@
 "use strict";
 
-/* overlay y menu hamburguesa */
+//Despliega el menú hamburguesa y oscurece el fondo del resto de la página
 
 let overlay = document.querySelector("#overlay");
 let menu = document.querySelector("#menu-hamburguesa");
