@@ -9,7 +9,7 @@ let imageFondo = new Image();
    }
 
 //Declara variables 
-let tiempo = 300;
+let tiempo = 30;
 let intervalo;
 let canvas = document.querySelector("#canvas");
 let ctx = canvas.getContext('2d');
@@ -23,6 +23,7 @@ let jugador1 = new Jugador("lauta");
 let jugador2 = new Jugador("leonela");
 let jugadores;
 let jugadorDeTurno;
+let ganador;
 let botones = document.querySelectorAll(".btn-modalidad");
 
 //Llama a la función inicializarEventos, que declara los eventos del mouse
@@ -46,7 +47,8 @@ b.addEventListener("click",event=>{
    totalfichas = (filas+1) * (filas+2);
    crearFichas(totalfichas);
    dibujarFichas(0);
-   tiempo = 300;
+   tiempo = 30;
+   ganador="";
    if(intervalo){
       clearInterval(intervalo);
    }
@@ -65,13 +67,33 @@ function DisminuirTiempo(){
 
 //Convierte la cuenta regresiva a formato "minutos : segundos"
 function mostrarTiempoTransformado(){
-   let minutes = Math.floor(tiempo/60);
-   let segundos = tiempo % 60;
-   minutes = minutes < 10 ? "0" + minutes : minutes;
-   segundos = segundos < 10 ? "0" + segundos : segundos;
-   ctx.font = "30px Arial";
-   ctx.fillStyle = "white";
-   ctx.fillText(`${minutes} : ${segundos}`, 410, 50); 
+   if(tiempo>0){
+      let minutes = Math.floor(tiempo/60);
+      let segundos = tiempo % 60;
+      minutes = minutes < 10 ? "0" + minutes : minutes;
+      segundos = segundos < 10 ? "0" + segundos : segundos;
+      ctx.font = "30px Arial";
+      ctx.fillStyle = "white";
+      ctx.fillText(`${minutes} : ${segundos}`, 410, 50); 
+   }else{
+      mostrarMensajeFinPartida();
+   }
+   
+}
+
+function mostrarMensajeFinPartida() {
+      ctx.font = "30px Arial";
+      ctx.fillStyle = "white";
+   if(ganador){
+      ctx.fillText(`Dracarys!!    ${ganador}`,300,50);
+      ctx.fillText(`ha reducido a cenizas a su oponente`,220,90);
+   }else{
+      ctx.fillText("Empate!!!",370,50);
+      ctx.fillText("La victoria es de los WhiteWalkers!!",220,90);
+      
+      
+   }
+   jugadorDeTurno="";
 }
 
 //Actualiza el renderizado del canvas

@@ -103,6 +103,8 @@ class Tablero {
     verificarGanador(i,n){
         if(this.verifH(i,n) || this.verifV(i,n) || this.verifD(i,n)){
             console.log("gano" + jugadorDeTurno.nombre)
+            ganador = jugadorDeTurno.nombre;
+            tiempo = -1;
         }
     }
 
