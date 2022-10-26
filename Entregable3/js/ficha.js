@@ -57,8 +57,8 @@ class Ficha  {
     //Verifica si en la posición donde fue clickeado el mouse hay una ficha
     verificarSelect(e,x,y){
         if(!this.selected && this.jugador == jugadorDeTurno.nombre){
-            let xCursor = e.clientX - x;
-            let yCursor = e.clientY - y;
+            let xCursor = e.pageX - x;
+            let yCursor = e.pageY - y;
             if(xCursor>this.x && xCursor< this.x+40 && yCursor> this.y && yCursor<this.y + 40){
                 this.selected = true;
             }

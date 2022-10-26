@@ -198,8 +198,8 @@ function mouseUp(params) {
 //Mueve la ficha siguiendo la trayectoria del mouse
 function mouseMove(params) {
    if(fichas){
-      let x = event.clientX - canvas.offsetLeft;
-   let y = event.clientY - canvas.offsetTop;
+      let x = event.pageX - canvas.offsetLeft;
+   let y = event.pageY - canvas.offsetTop;
    fichas.forEach(f=>f.actualizarPos(x,y));
    fichas2.forEach(f=>f.actualizarPos(x,y));
    actualizar();
