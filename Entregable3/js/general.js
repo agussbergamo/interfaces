@@ -9,14 +9,14 @@ let imageFondo = new Image();
    }
 
 //Declara variables 
-let tiempo = 30;
+let tiempo = 60;
 let intervalo;
 let canvas = document.querySelector("#canvas");
 let ctx = canvas.getContext('2d');
 let tablero;
-let cuadrilla; //varia segun tamaño => OK!
-let fichas; //varia segun tamaño => OK!
-let fichas2; //varia segun tamaño => OK!
+let cuadrilla;
+let fichas; 
+let fichas2; 
 let filas;
 let totalfichas;
 let jugador1 = new Jugador("Jugador 1");
@@ -41,27 +41,26 @@ b.addEventListener("click",event=>{
    cuadrilla = [];
    fichas = [];
    fichas2 =[];
-   tablero = new Tablero (canvas,ctx,cuadrilla,filas-1); //varia segun tamaño
+   tablero = new Tablero (canvas,ctx,cuadrilla,filas-1); 
    tablero.inicializar(filas);
    tablero.dibujar(0,filas);
    totalfichas = (filas+1) * (filas+2);
    crearFichas(totalfichas);
    dibujarFichas(0);
-   tiempo = 30;
+   tiempo = 60;
    ganador="";
    if(intervalo){
       clearInterval(intervalo);
    }
-   intervalo = setInterval(DisminuirTiempo,1000);
+   intervalo = setInterval(disminuirTiempo,1000);
 })
 })
 
 //Realiza la cuenta regresiva de lo que dura el juego
-function DisminuirTiempo(){
+function disminuirTiempo(){
    if(tiempo>0){
       tiempo--;
       actualizar();
-      
    }
 }
 
@@ -74,22 +73,31 @@ function mostrarTiempoTransformado(){
       segundos = segundos < 10 ? "0" + segundos : segundos;
       ctx.font = "30px Arial";
       ctx.fillStyle = "white";
-      ctx.fillText(`${minutes} : ${segundos}`, 410, 50); 
+      ctx.fillText(`${minutes} : ${segundos}`, 405, 100); 
    }else{
       mostrarMensajeFinPartida();
-   }
-   
+   }  
 }
 
+//Muestra el jugador que tiene que jugar
+function mostrarJugadorDeTurno() {
+   if(!ganador && tiempo>0){
+      ctx.font = "30px Mohave";
+      ctx.fillStyle = "white";
+      ctx.fillText(`Turno del ${jugadorDeTurno.nombre}`,345,50);
+   }
+}
+
+//Muestra un mensaje con el resultado del juego
 function mostrarMensajeFinPartida() {
       ctx.font = "30px Mohave";
       ctx.fillStyle = "white";
    if(ganador){
-      ctx.fillText(`¡Dracarys! ¡El ${ganador}`,300,50);
-      ctx.fillText(`ha reducido a cenizas a su oponente!`,220,90);
+      ctx.fillText(`¡Dracarys! ¡El ${ganador}`,320,80);
+      ctx.fillText(`ha reducido a cenizas a su oponente!`,240,130);
    }else{
-      ctx.fillText("¡Empate!",370,50);
-      ctx.fillText("¡El trono de hierro sigue sin heredero!",220,90);  
+      ctx.fillText("¡Empate!",400,80);
+      ctx.fillText("¡El trono de hierro sigue sin heredero!",240,130);  
    }
    jugadorDeTurno="";
 }
@@ -99,12 +107,19 @@ function mostrarMensajeFinPartida() {
 function actualizar(){
    ctx.clearRect(0,0,canvas.width,canvas.height);
    ctx.drawImage(imageFondo,0,0,canvas.width,canvas.height)
+   mostrarNombreJugadores();
    tablero.dibujar(1,filas);
    dibujarFichas(1);
-   mostrarTiempoTransformado()
-   /*ctx.font = "30px Arial";
-      ctx.fillStyle = "white";
-      ctx.fillText(`${tiempo}`, 450, 50);*/
+   mostrarTiempoTransformado();
+   mostrarJugadorDeTurno();
+}
+
+//Muestra el nombr del jugador arriba del set de fichas que le corresponden
+function mostrarNombreJugadores(){
+   ctx.font = "30px Mohave";
+   ctx.fillStyle = "white";
+   ctx.fillText(`Jugador 1`,30,50);
+   ctx.fillText(`Jugador 2`,765,50);
 }
 
 //Carga los jugadores en el arreglo de jugadores
@@ -137,7 +152,6 @@ function cambiarDeTurno(){
 //Crea las fichas
 //Setea el fondo de la ficha según la imagen seleccionada, y las ubica en la posición del canvas 
 //según jugador y tamaño del tablero a renderizar  
-//varia segun tamaño => OK!
 function crearFichas(totalfichas) {
 
    for (let i = 0; i < totalfichas/2; i++) {
@@ -145,23 +159,22 @@ function crearFichas(totalfichas) {
       let y;
       let img = new Image();
       img.src = `./${imageSelected}`;
-      if(i<13){
+      if(i<12){
           x = 15;
-          y = i* 50 + 30;
+          y = i*50 + 80;
          
-      }else if(i<26){
+      }else if(i<24){
           x = 60;
-          y = (i - 13)* 50 + 30;
+          y = (i - 12) * 50 + 80;
          
-      }else if(i<39){
+      }else if(i<36){
          x = 105;
-         y = (i-26) *50 + 30;
+         y = (i-24) * 50 + 80;
       }else{
-         x = 150;
-         y = (i-39) * 50 + 30;
+         x = 149;
+         y = (i-36) * 50 + 80;
       }
-      fichas[i] = new Ficha (x,y,img,jugador1);
-             
+      fichas[i] = new Ficha (x,y,img,jugador1);          
    }
 
    for (let i = 0; i < totalfichas/2; i++) {
@@ -169,24 +182,22 @@ function crearFichas(totalfichas) {
       let y;
       let img = new Image();
       img.src = `./${imageSelected2}`;
-      if(i<13){
+      if(i<12){
           x = canvas.offsetWidth - 55;
-          y = i* 50 + 30;
+          y = i* 50 + 80;
          
-      }else if(i<26){
+      }else if(i<24){
           x = canvas.offsetWidth - 100;
-          y = (i - 13)* 50 + 30;
+          y = (i - 12)* 50 + 80;
          
-      }else if(i<39){
+      }else if(i<36){
          x = canvas.offsetWidth - 145;
-         y = (i-26)*50 + 30;
+         y = (i-24)*50 + 80;
       }else{
          x = canvas.offsetWidth - 190;
-         y = (i-39) * 50 + 30;
+         y = (i-36) * 50 + 80;
       }
       fichas2[i] = new Ficha (x,y,img,jugador2);
-         
-      
    }
 }
 
@@ -226,7 +237,6 @@ function mouseMove(params) {
    }   
 }
 
-
 //Trae del DOM las posibles fichas con las que se puede jugar 
 let ficha1 = document.querySelectorAll(".ficha1ASelec");
 let ficha2 = document.querySelectorAll(".ficha2ASelec");
@@ -259,7 +269,6 @@ function verificarSeleccionadas(fichas,image) {
       }
    })
 }
-
 
 //Oculta la descripción del juego al clickear el botón "jugar"
 //Muestra el contenedor de fichas para elegir color
