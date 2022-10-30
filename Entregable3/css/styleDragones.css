@@ -79,8 +79,7 @@ div.nav+ul li:nth-child(odd):hover {
     top: 30px;
 }
 
-
-/* containers de sector canvas*/
+/* Canvas */
 
 div.canva-container.ocultar{
     display: none;
@@ -90,26 +89,51 @@ div.contenedor-juego.ocultar{
     display: none;
 }
 
-/* Botón jugar */
-
-.btn-jugar {
-    background-color: #77F4ED;
-    border-radius: 35px;
-    border: none;
-    font-weight: 500;
-    width: 100px;
-    height: 40px;
-    font-family: 'Mohave';
-    font-size: x-large;
-    transition-duration: 0.4s;
-    cursor: pointer;
-    position: absolute;
-    bottom: 130px;
-    right: 110px;
+.canva-container{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 40px;
 }
 
-.btn-jugar:hover {
+.canva-container div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.selected{
+    border: solid 2px navajowhite   ;
+}
+
+/* Botones */
+
+.btn-jugar, .btn-modalidad, .input-comentario button {
+    background-color: #77F4ED;
+    border-radius: 20px;
+    border: none;
+    font-weight: 500;
+    font-family: 'Mohave';
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.btn-jugar:hover, .btn-modalidad:hover, .input-comentario button:hover {
     background-color: #FECA65;
+}
+
+.btn-jugar {
+    width: 100px;
+    height: 40px;
+    font-size: x-large;
+    position: absolute;
+    bottom: 170px;
+    right: 100px;
+}
+
+.input-comentario button, .btn-modalidad {
+    width: 80px;
+    height: 30px;
+    font-size: large;
 }
 
 /* Galeria */
@@ -266,21 +290,4 @@ p{
     justify-content: center;
     background-color: #2a2f3a;
     cursor: pointer;
-}
-
-/* canvas */
-.canva-container{
-    display: flex;
-    justify-content: space-evenly;
-    margin-top: 40px;
-}
-
-.canva-container div{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-}
-
-.selected{
-    border: solid 2px navajowhite   ;
 }

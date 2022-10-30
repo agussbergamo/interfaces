@@ -19,8 +19,8 @@ let fichas; //varia segun tamaño => OK!
 let fichas2; //varia segun tamaño => OK!
 let filas;
 let totalfichas;
-let jugador1 = new Jugador("lauta");
-let jugador2 = new Jugador("leonela");
+let jugador1 = new Jugador("Jugador 1");
+let jugador2 = new Jugador("Jugador 2");
 let jugadores;
 let jugadorDeTurno;
 let ganador;
@@ -82,16 +82,14 @@ function mostrarTiempoTransformado(){
 }
 
 function mostrarMensajeFinPartida() {
-      ctx.font = "30px Arial";
+      ctx.font = "30px Mohave";
       ctx.fillStyle = "white";
    if(ganador){
-      ctx.fillText(`Dracarys!!    ${ganador}`,300,50);
-      ctx.fillText(`ha reducido a cenizas a su oponente`,220,90);
+      ctx.fillText(`¡Dracarys! ¡El ${ganador}`,300,50);
+      ctx.fillText(`ha reducido a cenizas a su oponente!`,220,90);
    }else{
-      ctx.fillText("Empate!!!",370,50);
-      ctx.fillText("La victoria es de los WhiteWalkers!!",220,90);
-      
-      
+      ctx.fillText("¡Empate!",370,50);
+      ctx.fillText("¡El trono de hierro sigue sin heredero!",220,90);  
    }
    jugadorDeTurno="";
 }
@@ -271,7 +269,7 @@ btnDesc.addEventListener("click",() =>{
    contenedorFichas.classList.remove("ocultar");
 })
 
-//Oculta la imagen y la configuración de fichas al clickear el botón "todo listo!"
+//Oculta la imagen y la configuración de fichas al clickear el botón "¡Listo!"
 //Muestra el canvas con el juego
 let btnJugar = document.querySelector("#btn-jugar");
 btnJugar.addEventListener("click",() =>{
