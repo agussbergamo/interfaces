@@ -53,8 +53,15 @@ b.addEventListener("click",event=>{
       clearInterval(intervalo);
    }
    intervalo = setInterval(disminuirTiempo,1000);
+   marcarModalidad(b);
 })
 })
+
+//Deja marcado el botón seleccionado
+function marcarModalidad(boton){
+botones.forEach(b => b.classList.remove("modalidad-seleccionada"))
+   boton.classList.add("modalidad-seleccionada");
+}
 
 //Realiza la cuenta regresiva de lo que dura el juego
 function disminuirTiempo(){

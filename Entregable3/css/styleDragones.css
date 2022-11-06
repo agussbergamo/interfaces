@@ -44,7 +44,7 @@ div.nav+ul li:nth-child(odd):hover {
     border: solid 1px white;
 }
 .contenedor-juego div.iconos ~ div img.selected{
-    border: solid 2px navajowhite   ;
+    border: solid 4px #77F4ED;
 }
 
 .contenedor-juego p {
@@ -117,7 +117,7 @@ div.contenedor-juego.ocultar{
     cursor: pointer;
 }
 
-.btn-jugar:hover, .btn-modalidad:hover, .input-comentario button:hover {
+.btn-jugar:hover, .btn-modalidad:hover, .input-comentario button:hover, .btn-modalidad.modalidad-seleccionada {
     background-color: #FECA65;
 }
 

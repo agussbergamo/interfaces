@@ -10,26 +10,30 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/styleDragones.css">
-    <title>Dragones en línea</title>
+    <link rel="stylesheet" href="css/styleHome.css">
+    <title>OnGaming</title>
 </head>
+
 <body>
+    <div class="inicio">
+        <div class="lds-default"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+        <h2>Cargando página...</h2>
+        <h2 > <span id="porcentaje">0</span>%</h2>
+    </div>
     <div id="overlay" class="overlay ocultar"></div>
     <header id="header" class="header">
         <div>
             <a href="index.html"><img src="img/logo.png" alt="Logo" class="logo"></a>
-            <a href="index.html">
-                <h1 class="texto-header">On Gaming</h1>
-            </a>
+            <a href="index.html"><h1 class="texto-header">On Gaming</h1></a>
         </div>
         <div>
             <div class="redes">
-                <img src="img/redes1.png" alt="icono instagram" class="icono-redes">
-                <img src="img/redes2.png" alt="icono twitch" class="icono-redes">
-                <img src="img/redes3.png" alt="icono twitter" class="icono-redes">
-                <img src="img/redes4.png" alt="icono facebook" class="icono-redes">
-                <img src="img/redes5.png" alt="icono youtube" class="icono-redes">
-             </div>
+               <img src="img/redes1.png" alt="icono instagram" class="icono-redes">
+               <img src="img/redes2.png" alt="icono twitch" class="icono-redes">
+               <img src="img/redes3.png" alt="icono twitter" class="icono-redes">
+               <img src="img/redes4.png" alt="icono facebook" class="icono-redes">
+               <img src="img/redes5.png" alt="icono youtube" class="icono-redes">
+            </div>
             <img src="img/menu.png" id="btn-hamburguesa" class="menu"></img>
             <ul id="menu-hamburguesa" class="ocultar">
                 <li class="animated-button">Redes</li>
@@ -42,95 +46,688 @@
             </ul>
         </div>
     </header>
-    <div class="nav ocultar" id="categorias">Categorías</div>
+    <div class="nav" id="categorias">Categorías</div>
     <ul class="ocultar" id="lista-categorias">
-        <a href="index.html">
-            <li>Inicio</li>
-        </a>
-        <li>></li>
-        <li>Recomendados para ti</li>
-        <li>></li>
-        <li>Dragones en línea</li>
+        <li>Recomendados</li>
+        <li>Aventura</li>
+        <li>Estrategia</li>
+        <li>2 Personas</li>
+        <li>Tiros</li>
+        <li class="btn-hero"><a> <span> Hero</span> </a></li>
     </ul>
-    <div class="contenedor-juego">
-        <img src="img/casadragon.jpg" alt="foto serie" class="img-juego">
-        
-        <div>
-            <div class="iconos">
-                <img src="img/icono-estrella.png" alt="icono estrella" class="icono">
-                <img src="img/icono-compartir.png" alt="icono compartir" class="icono">
-            </div>
-            <div id="contenedor-descripcion">
-                <p>¡Alinea tus dragones y sé el heredero al trono de hierro!</p>
-                <button id="btn-descripcion" class="btn-jugar">Jugar</button>
-            </div>
-            <div id="contenedor-fichas" class="ocultar">
-                <p>Jugador 1</p>
-                <img src="img/dragon1.png" alt="ficha dragon 1" class=" ficha1ASelec" data-src ="img/dragon1.png">
-                <img src="img/dragon2.png" alt="ficha dragon 2" class=" ficha1ASelec" data-src ="img/dragon2.png">
-                <img src="img/dragon3.png" alt="ficha dragon 3" class=" ficha1ASelec" data-src ="img/dragon3.png">
-                <img src="img/dragon4.png" alt="ficha dragon 4" class=" ficha1ASelec" data-src ="img/dragon4.png">
-                <p>Jugador 2</p>
-                <img src="img/dragon1.png" alt="ficha dragon 1" class=" ficha2ASelec" data-src ="img/dragon1.png">
-                <img src="img/dragon2.png" alt="ficha dragon 2" class=" ficha2ASelec" data-src ="img/dragon2.png">
-                <img src="img/dragon3.png" alt="ficha dragon 3" class=" ficha2ASelec" data-src ="img/dragon3.png">
-                <img src="img/dragon4.png" alt="ficha dragon 4" class=" ficha2ASelec" data-src ="img/dragon4.png">
-                <button id="btn-jugar" class="btn-jugar">¡Listo!</button>
-            </div>
-        </div>
+    <div class="categorias">
+        <h3 id="recomendados">Recomendados para ti</h3>
+        <ul class="carrusel">
+            <img src="img/flecha.png" alt="flecha" class="flecha-ant">
+            <li class="card">
+                <img src="img/tag-gratis.png" alt="tag-gratis" class="tag-gratis">
+                <img class="img-juego" src="img/1.jpg" alt="imagen-juego">
+                <div class="contenedor-info">
+                    <h4>Dragones en línea</h4>
+                    <div class="estrellas">
+                        <img src="img/estrella.png" alt="estrella" class="estrella">
+                        <img src="img/estrella.png" alt="estrella" class="estrella">
+                        <img src="img/estrella.png" alt="estrella" class="estrella">
+                        <img src="img/estrella.png" alt="estrella" class="estrella">
+                        <img src="img/estrella.png" alt="estrella" class="estrella">
+                    </div>
+                </div>
+                <div class="contenedor-btn-card"><button class="ocultar btn-card" id="cuatroEnLineas"> <span>
+                            Jugar</button></span></div>
+            </li>
+            <li class="card">
+                <img class="img-juego" src="img/2.jpg" alt="imagen-juego">
+                <div class="contenedor-info">
+                    <h4>Fall guys</h4>
+                    <div class="estrellas">
+                        <img src="img/estrella.png" alt="estrella" class="estrella">
+                        <img src="img/estrella.png" alt="estrella" class="estrella">
+                        <img src="img/estrella.png" alt="estrella" class="estrella">
+                    </div>
+                    <p class="precio">$150</p>
+                </div>
+                <div class="contenedor-btn-card"><button class="ocultar btn-card"><span> Comprar</button></span></div>
+            </li>
+            <li class="card">
+                <img class="img-juego" src="img/3.jpg" alt="imagen-juego">
+                <div class="contenedor-info">
+                    <h4>Super Mario</h4>
+                    <div class="estrellas">
+                        <img src="img/estrella.png" alt="estrella" class="estrella">
+                        <img src="img/estrella.png" alt="estrella" class="estrella">
+                        <img src="img/estrella.png" alt="estrella" class="estrella">
+                        <img src="img/estrella.png" alt="estrella" class="estrella">
+                    </div>
+                    <p class="precio">$350</p>
+                </div>
+                <div class="contenedor-btn-card"><button class="ocultar btn-card"> <span> Comprar</button></span></div>
+            </li>
+            <li class="card">
+                <img src="img/tag-gratis.png" alt="tag-gratis" class="tag-gratis">
+                <img class="img-juego" src="img/4.jpg" alt="imagen-juego">
+                <div class="contenedor-info">
+                    <h4>Donkey Kong</h4>
+                    <div class="estrellas">
+                        <img src="img/estrella.png" alt="estrella" class="estrella">
+                        <img src="img/estrella.png" alt="estrella" class="estrella">
+                        <img src="img/estrella.png" alt="estrella" class="estrella">
+                    </div>
+                </div>
+                <div class="contenedor-btn-card"><button class="ocultar btn-card"> <span>Jugar</button></span></div>
+            </li>
+            <li class="card">
+                <img src="img/tag-gratis.png" alt="tag-gratis" class="tag-gratis">
+                <img class="img-juego" src="img/5.jpg" alt="imagen-juego">
+                <div class="contenedor-info">
+                    <h4>Araña solitaria</h4>
+                    <div class="estrellas">
+                        <img src="img/estrella.png" alt="estrella" class="estrella">
+                    </div>
+                </div>
+                <div class="contenedor-btn-card"><button class="ocultar btn-card"> <span>Jugar</button></span></div>
+            </li>
+            <li class="card">
+                <img class="img-juego" src="img/6.jpg" alt="imagen-juego">
+                <div class="contenedor-info">
+                    <h4>Naruto</h4>
+                    <div class="estrellas">
+                        <img src="img/estrella.png" alt="estrella" class="estrella">
+                        <img src="img/estrella.png" alt="estrella" class="estrella">
+                        <img src="img/estrella.png" alt="estrella" class="estrella">
+                        <img src="img/estrella.png" alt="estrella" class="estrella">
+                    </div>
+                    <p class="precio">$200</p>
+                </div>
+                <div class="contenedor-btn-card"><button class="ocultar btn-card"> <span>Comprar</button></span></div>
+            </li>
+            <li class="card">
+                <img class="img-juego" src="img/7.jpg" alt="imagen-juego">
+                <div class="contenedor-info">
+                    <h4>Pájaros enojados</h4>
+                    <div class="estrellas">
+                        <img src="img/estrella.png" alt="estrella" class="estrella">
+                    </div>
+                    <p class="precio">$100</p>
+                </div>
+                <div class="contenedor-btn-card"><button class="ocultar btn-card"> <span>Comprar</button></span></div>
+            </li>
+            <li class="card">
+                <img class="img-juego" src="img/8.jpg" alt="imagen-juego">
+                <div class="contenedor-info">
+                    <h4>El rubio y el otro</h4>
+                    <div class="estrellas">
+                        <img src="img/estrella.png" alt="estrella" class="estrella">
+                        <img src="img/estrella.png" alt="estrella" class="estrella">
+                        <img src="img/estrella.png" alt="estrella" class="estrella">
+                        <img src="img/estrella.png" alt="estrella" class="estrella">
+                    </div>
+                    <p class="precio">$150</p>
+                </div>
+                <div class="contenedor-btn-card"><button class="ocultar btn-card"> <span>Comprar</button></span></div>
+            </li>
+            <li class="card">
+                <img src="img/tag-gratis.png" alt="tag-gratis" class="tag-gratis">
+                <img class="img-juego" src="img/9.jpg" alt="imagen-juego">
+                <div class="contenedor-info">
+                    <h4>Mahjong 4</h4>
+                    <div class="estrellas">
+                        <img src="img/estrella.png" alt="estrella" class="estrella">
+                        <img src="img/estrella.png" alt="estrella" class="estrella">
+                        <img src="img/estrella.png" alt="estrella" class="estrella">
+                        <img src="img/estrella.png" alt="estrella" class="estrella">
+                    </div>
+                </div>
+                <div class="contenedor-btn-card"><button class="ocultar btn-card"> <span>Jugar</button></span></div>
+            </li>
+            <li class="card">
+                <img src="img/tag-gratis.png" alt="tag-gratis" class="tag-gratis">
+                <img class="img-juego" src="img/10.jpg" alt="imagen-juego">
+                <div class="contenedor-info">
+                    <h4>Emojis para dibujar</h4>
+                    <div class="estrellas">
+                        <img src="img/estrella.png" alt="estrella" class="estrella">
+                    </div>
+                </div>
+                <div class="contenedor-btn-card"><button class="ocultar btn-card"> <span>Jugar</button></span></div>
+            </li>
+            <img src="img/flecha.png" alt="flecha" class="flecha-sig">
+        </ul>
     </div>
-    <div class="canva-container ocultar">
-        <div>
-            <button class="btn-modalidad" value="5">4 en línea</button>
-            <button class="btn-modalidad" value="6">5 en línea</button>
-            <button class="btn-modalidad" value="7">6 en línea</button>
-            <button class="btn-modalidad" value="8">7 en línea</button>
-        </div>
-        <canvas id="canvas" width="900" height="700" style="border: 1px solid black;"></canvas>
-        <div></div>
+    <div class="categorias">
+        <h3 id="aventuras">Juegos de aventuras</h3>
+        <ul class="carrusel">
+            <img src="img/flecha.png" alt="flecha" class="flecha-ant">
+            <li class="card">
+                <img src="img/tag-gratis.png" alt="tag-gratis" class="tag-gratis">
+                <img class="img-juego" src="img/11.jpg" alt="imagen-juego">
+                <div class="contenedor-info">
+                    <h4>Bob esponja</h4>
+                    <div class="estrellas">
+                        <img src="img/estrella.png" alt="estrella" class="estrella">
+                        <img src="img/estrella.png" alt="estrella" class="estrella">
+                    </div>
+                </div>
+                <div class="contenedor-btn-card"><button class="ocultar btn-card"><span>Jugar</span></button></div>
+            </li>
+            <li class="card">
+                <img src="img/tag-gratis.png" alt="tag-gratis" class="tag-gratis">
+                <img class="img-juego" src="img/12.jpg" alt="imagen-juego">
+                <div class="contenedor-info">
+                    <h4>Mario y sus amigos</h4>
+                    <div class="estrellas">
+                        <img src="img/estrella.png" alt="estrella" class="estrella">
+                        <img src="img/estrella.png" alt="estrella" class="estrella">
+                        <img src="img/estrella.png" alt="estrella" class="estrella">
+                        <img src="img/estrella.png" alt="estrella" class="estrella">
+                    </div>
+                </div>
+                <div class="contenedor-btn-card"><button class="ocultar btn-card"><span>Jugar</span></button></div>
+            </li>
+            <li class="card">
+                <img class="img-juego" src="img/13.jpg" alt="imagen-juego">
+                <div class="contenedor-info">
+                    <h4>La pelota roja feliz</h4>
+                    <div class="estrellas">
+                        <img src="img/estrella.png" alt="estrella" class="estrella">
+                        <img src="img/estrella.png" alt="estrella" class="estrella">
+                        <img src="img/estrella.png" alt="estrella" class="estrella">
+                    </div>
+                    <p class="precio">$250</p>
+                </div>
+                <div class="contenedor-btn-card"><button class="ocultar btn-card"><span>Comprar</span></button></div>
+            </li>
+            <li class="card">
+                <img class="img-juego" src="img/14.jpg" alt="imagen-juego">
+                <div class="contenedor-info">
+                    <h4>Aventuras en la selva</h4>
+                    <div class="estrellas">
+                        <img src="img/estrella.png" alt="estrella" class="estrella">
+                        <img src="img/estrella.png" alt="estrella" class="estrella">
+                    </div>
+                    <p class="precio">$150</p>
+                </div>
+                <div class="contenedor-btn-card"><button class="ocultar btn-card"><span>Comprar</span></button></div>
+            </li>
+            <li class="card">
+                <img class="img-juego" src="img/15.jpg" alt="imagen-juego">
+                <div class="contenedor-info">
+                    <h4>Animalos</h4>
+                    <div class="estrellas">
+                        <img src="img/estrella.png" alt="estrella" class="estrella">
+                    </div>
+                    <p class="precio">$100</p>
+                </div>
+                <div class="contenedor-btn-card"><button class="ocultar btn-card"><span>Comprar</span></button></div>
+            </li>
+            <li class="card">
+                <img class="img-juego" src="img/16.jpg" alt="imagen-juego">
+                <div class="contenedor-info">
+                    <h4>Baby shark</h4>
+                    <div class="estrellas">
+                        <img src="img/estrella.png" alt="estrella" class="estrella">
+                        <img src="img/estrella.png" alt="estrella" class="estrella">
+                        <img src="img/estrella.png" alt="estrella" class="estrella">
+                        <img src="img/estrella.png" alt="estrella" class="estrella">
+                        <img src="img/estrella.png" alt="estrella" class="estrella">
+                    </div>
+                    <p class="precio">$200</p>
+                </div>
+                <div class="contenedor-btn-card"><button class="ocultar btn-card"><span>Comprar</span></button></div>
+            </li>
+            <li class="card">
+                <img class="img-juego" src="img/17.jpg" alt="imagen-juego">
+                <div class="contenedor-info">
+                    <h4>Cuidemos el mundo</h4>
+                    <div class="estrellas">
+                        <img src="img/estrella.png" alt="estrella" class="estrella">
+                    </div>
+                    <p class="precio">$80</p>
+                </div>
+                <div class="contenedor-btn-card"><button class="ocultar btn-card"><span>Comprar</span></button></div>
+            </li>
+            <li class="card">
+                <img src="img/tag-gratis.png" alt="tag-gratis" class="tag-gratis">
+                <img class="img-juego" src="img/18.jpg" alt="imagen-juego">
+                <div class="contenedor-info">
+                    <h4>Los autos locos</h4>
+                    <div class="estrellas">
+                        <img src="img/estrella.png" alt="estrella" class="estrella">
+                        <img src="img/estrella.png" alt="estrella" class="estrella">
+                        <img src="img/estrella.png" alt="estrella" class="estrella">
+                        <img src="img/estrella.png" alt="estrella" class="estrella">
+                    </div>
+                </div>
+                <div class="contenedor-btn-card"><button class="ocultar btn-card"><span>Jugar</span></button></div>
+            </li>
+            <li class="card">
+                <img src="img/tag-gratis.png" alt="tag-gratis" class="tag-gratis">
+                <img class="img-juego" src="img/19.jpg" alt="imagen-juego">
+                <div class="contenedor-info">
+                    <h4>El conejo pistero</h4>
+                    <div class="estrellas">
+                        <img src="img/estrella.png" alt="estrella" class="estrella">
+                        <img src="img/estrella.png" alt="estrella" class="estrella">
+                    </div>
+                </div>
+                <div class="contenedor-btn-card"><button class="ocultar btn-card"><span>Jugar</span></button></div>
+            </li>
+            <li class="card">
+                <img src="img/tag-gratis.png" alt="tag-gratis" class="tag-gratis">
+                <img class="img-juego" src="img/20.jpg" alt="imagen-juego">
+                <div class="contenedor-info">
+                    <h4>Buzz lightyear</h4>
+                    <div class="estrellas">
+                        <img src="img/estrella.png" alt="estrella" class="estrella">
+                        <img src="img/estrella.png" alt="estrella" class="estrella">
+                    </div>
+                </div>
+                <div class="contenedor-btn-card"><button class="ocultar btn-card"><span>Jugar</span></button></div>
+            </li>
+            <img src="img/flecha.png" alt="flecha" class="flecha-sig">
+        </ul>
     </div>
-    <div class="div-center gallery">
-        <div class="carousel">
-            <figure><img src="img/galeria10.jpg" alt="imagen juego"></figure>
-            <figure><img src="img/galeria11.jpg" alt="imagen juego"></figure>
-            <figure><img src="img/galeria1.jpg" alt="imagen juego"></figure>
-            <figure><img src="img/galeria2.jpg" alt="imagen juego"></figure>
-            <figure><img src="img/galeria3.jpg" alt="imagen juego"></figure>
-            <figure><img src="img/galeria4.jpg" alt="imagen juego"></figure>
-            <figure><img src="img/galeria5.jpg" alt="imagen juego"></figure>
-            <figure><img src="img/galeria6.jpg" alt="imagen juego"></figure>
-            <figure><img src="img/galeria7.jpg" alt="imagen juego"></figure>
-        </div>
+    <div class="categorias">
+        <h3 id="estrategia">Juegos de estrategia</h3>
+        <ul class="carrusel">
+            <img src="img/flecha.png" alt="flecha" class="flecha-ant">
+            <li class="card">
+                <img class="img-juego" src="img/21.jpg" alt="imagen-juego">
+                <div class="contenedor-info">
+                    <h4>Parque jurásico</h4>
+                    <div class="estrellas">
+                        <img src="img/estrella.png" alt="estrella" class="estrella">
+                        <img src="img/estrella.png" alt="estrella" class="estrella">
+                        <img src="img/estrella.png" alt="estrella" class="estrella">
+                    </div>
+                    <p class="precio">$400</p>
+                </div>
+                <div class="contenedor-btn-card"><button class="ocultar btn-card"><span>Comprar</span></button></div>
+            </li>
+            <li class="card">
+                <img src="img/tag-gratis.png" alt="tag-gratis" class="tag-gratis">
+                <img class="img-juego" src="img/22.jpg" alt="imagen-juego">
+                <div class="contenedor-info">
+                    <h4>Pacman forever</h4>
+                    <div class="estrellas">
+                        <img src="img/estrella.png" alt="estrella" class="estrella">
+                        <img src="img/estrella.png" alt="estrella" class="estrella">
+                        <img src="img/estrella.png" alt="estrella" class="estrella">
+                        <img src="img/estrella.png" alt="estrella" class="estrella">
+                    </div>
+                </div>
+                <div class="contenedor-btn-card"><button class="ocultar btn-card"><span>Jugar</span></button></div>
+            </li>
+            <li class="card">
+                <img class="img-juego" src="img/23.jpg" alt="imagen-juego">
+                <div class="contenedor-info">
+                    <h4>Sonic y sus amigues</h4>
+                    <div class="estrellas">
+                        <img src="img/estrella.png" alt="estrella" class="estrella">
+                    </div>
+                    <p class="precio">$150</p>
+                </div>
+                <div class="contenedor-btn-card"><button class="ocultar btn-card"><span>Comprar</span></button></div>
+            </li>
+            <li class="card">
+                <img src="img/tag-gratis.png" alt="tag-gratis" class="tag-gratis">
+                <img class="img-juego" src="img/24.jpg" alt="imagen-juego">
+                <div class="contenedor-info">
+                    <h4>Pokemon vintage</h4>
+                    <div class="estrellas">
+                        <img src="img/estrella.png" alt="estrella" class="estrella">
+                        <img src="img/estrella.png" alt="estrella" class="estrella">
+                    </div>
+                </div>
+                <div class="contenedor-btn-card"><button class="ocultar btn-card"><span>Jugar</span></button></div>
+            </li>
+            <li class="card">
+                <img class="img-juego" src="img/25.jpg" alt="imagen-juego">
+                <div class="contenedor-info">
+                    <h4>Spiderman</h4>
+                    <div class="estrellas">
+                        <img src="img/estrella.png" alt="estrella" class="estrella">
+                        <img src="img/estrella.png" alt="estrella" class="estrella">
+                        <img src="img/estrella.png" alt="estrella" class="estrella">
+                    </div>
+                    <p class="precio">$200</p>
+                </div>
+                <div class="contenedor-btn-card"><button class="ocultar btn-card"><span>Comprar</span></button></div>
+            </li>
+            <li class="card">
+                <img src="img/tag-gratis.png" alt="tag-gratis" class="tag-gratis">
+                <img class="img-juego" src="img/26.jpg" alt="imagen-juego">
+                <div class="contenedor-info">
+                    <h4>Mini superhéroes</h4>
+                    <div class="estrellas">
+                        <img src="img/estrella.png" alt="estrella" class="estrella">
+                        <img src="img/estrella.png" alt="estrella" class="estrella">
+                    </div>
+                </div>
+                <div class="contenedor-btn-card"><button class="ocultar btn-card"><span>Jugar</span></button></div>
+            </li>
+            <li class="card">
+                <img src="img/tag-gratis.png" alt="tag-gratis" class="tag-gratis">
+                <img class="img-juego" src="img/27.jpg" alt="imagen-juego">
+                <div class="contenedor-info">
+                    <h4>Peppa pig</h4>
+                    <div class="estrellas">
+                        <img src="img/estrella.png" alt="estrella" class="estrella">
+                        <img src="img/estrella.png" alt="estrella" class="estrella">
+                        <img src="img/estrella.png" alt="estrella" class="estrella">
+                        <img src="img/estrella.png" alt="estrella" class="estrella">
+                        <img src="img/estrella.png" alt="estrella" class="estrella">
+                    </div>
+                </div>
+                <div class="contenedor-btn-card"><button class="ocultar btn-card"><span>Jugar</span></button></div>
+            </li>
+            <li class="card">
+                <img class="img-juego" src="img/28.jpg" alt="imagen-juego">
+                <div class="contenedor-info">
+                    <h4>Pequeño pony</h4>
+                    <div class="estrellas">
+                        <img src="img/estrella.png" alt="estrella" class="estrella">
+                        <img src="img/estrella.png" alt="estrella" class="estrella">
+                        <img src="img/estrella.png" alt="estrella" class="estrella">
+                    </div>
+                    <p class="precio">$150</p>
+                </div>
+                <div class="contenedor-btn-card"><button class="ocultar btn-card"><span>Comprar</span></button></div>
+            </li>
+            <li class="card">
+                <img src="img/tag-gratis.png" alt="tag-gratis" class="tag-gratis">
+                <img class="img-juego" src="img/29.jpg" alt="imagen-juego">
+                <div class="contenedor-info">
+                    <h4>Simon dice</h4>
+                    <div class="estrellas">
+                        <img src="img/estrella.png" alt="estrella" class="estrella">
+                        <img src="img/estrella.png" alt="estrella" class="estrella">
+                        <img src="img/estrella.png" alt="estrella" class="estrella">
+                        <img src="img/estrella.png" alt="estrella" class="estrella">
+                    </div>
+                </div>
+                <div class="contenedor-btn-card"><button class="ocultar btn-card"><span>Jugar</span></button></div>
+            </li>
+            <li class="card">
+                <img src="img/tag-gratis.png" alt="tag-gratis" class="tag-gratis">
+                <img class="img-juego" src="img/30.jpg" alt="imagen-juego">
+                <div class="contenedor-info">
+                    <h4>Ejercita tu cerebro</h4>
+                    <div class="estrellas">
+                        <img src="img/estrella.png" alt="estrella" class="estrella">
+                        <img src="img/estrella.png" alt="estrella" class="estrella">
+                    </div>
+                </div>
+                <div class="contenedor-btn-card"><button class="ocultar btn-card"><span>Jugar</span></button></div>
+            </li>
+            <img src="img/flecha.png" alt="flecha" class="flecha-sig">
+        </ul>
     </div>
-    <div class="instrucciones">
-        <div>
-            <img src="img/icono-instrucciones.png" alt="icono instrucciones" class="icono">
-            <h3>¿Cómo se juega?</h3>
-        </div>
-        <p>En su turno, cada jugador coloca una ficha de su dragón en una columna y esta cae hasta la primera casilla
-            disponible. El que consigue ubicar la cantidad necesaria de fichas del mismo dragón seguidas en horizontal, vertical u oblicuo,
-            gana. Si nadie lo consigue la partida termina en empate.</p>
+    <div class="categorias">
+        <h3 id="dosJugadores">Juegos de 2 jugadores</h3>
+        <ul class="carrusel">
+            <img src="img/flecha.png" alt="flecha" class="flecha-ant">
+            <li class="card">
+                <img class="img-juego" src="img/31.jpg" alt="imagen-juego">
+                <div class="contenedor-info">
+                    <h4>Deadpool soccer</h4>
+                    <div class="estrellas">
+                        <img src="img/estrella.png" alt="estrella" class="estrella">
+                        <img src="img/estrella.png" alt="estrella" class="estrella">
+                        <img src="img/estrella.png" alt="estrella" class="estrella">
+                    </div>
+                    <p class="precio">$150</p>
+                </div>
+                <div class="contenedor-btn-card"><button class="ocultar btn-card"><span>Comprar</span></button></div>
+            </li>
+            <li class="card">
+                <img class="img-juego" src="img/32.jpg" alt="imagen-juego">
+                <div class="contenedor-info">
+                    <h4>Futbolistas cabezones</h4>
+                    <div class="estrellas">
+                        <img src="img/estrella.png" alt="estrella" class="estrella">
+                        <img src="img/estrella.png" alt="estrella" class="estrella">
+                        <img src="img/estrella.png" alt="estrella" class="estrella">
+                        <img src="img/estrella.png" alt="estrella" class="estrella">
+                    </div>
+                    <p class="precio">$150</p>
+                </div>
+                <div class="contenedor-btn-card"><button class="ocultar btn-card"><span>Comprar</span></button></div>
+            </li>
+            <li class="card">
+                <img src="img/tag-gratis.png" alt="tag-gratis" class="tag-gratis">
+                <img class="img-juego" src="img/33.jpg" alt="imagen-juego">
+                <div class="contenedor-info">
+                    <h4>Ludo matic</h4>
+                    <div class="estrellas">
+                        <img src="img/estrella.png" alt="estrella" class="estrella">
+                    </div>
+                </div>
+                <div class="contenedor-btn-card"><button class="ocultar btn-card"><span>Jugar</span></button></div>
+            </li>
+            <li class="card">
+                <img src="img/tag-gratis.png" alt="tag-gratis" class="tag-gratis">
+                <img class="img-juego" src="img/34.jpg" alt="imagen-juego">
+                <div class="contenedor-info">
+                    <h4>Among us</h4>
+                    <div class="estrellas">
+                        <img src="img/estrella.png" alt="estrella" class="estrella">
+                        <img src="img/estrella.png" alt="estrella" class="estrella">
+                        <img src="img/estrella.png" alt="estrella" class="estrella">
+                        <img src="img/estrella.png" alt="estrella" class="estrella">
+                    </div>
+                </div>
+                <div class="contenedor-btn-card"><button class="ocultar btn-card"><span>Jugar</span></button></div>
+            </li>
+            <li class="card">
+                <img class="img-juego" src="img/35.jpg" alt="imagen-juego">
+                <div class="contenedor-info">
+                    <h4>El juego del calamar</h4>
+                    <div class="estrellas">
+                        <img src="img/estrella.png" alt="estrella" class="estrella">
+                        <img src="img/estrella.png" alt="estrella" class="estrella">
+                    </div>
+                    <p class="precio">$150</p>
+                </div>
+                <div class="contenedor-btn-card"><button class="ocultar btn-card"><span>Comprar</span></button></div>
+            </li>
+            <li class="card">
+                <img src="img/tag-gratis.png" alt="tag-gratis" class="tag-gratis">
+                <img class="img-juego" src="img/36.jpg" alt="imagen-juego">
+                <div class="contenedor-info">
+                    <h4>Los tóxicos</h4>
+                    <div class="estrellas">
+                        <img src="img/estrella.png" alt="estrella" class="estrella">
+                        <img src="img/estrella.png" alt="estrella" class="estrella">
+                        <img src="img/estrella.png" alt="estrella" class="estrella">
+                    </div>
+                </div>
+                <div class="contenedor-btn-card"><button class="ocultar btn-card"><span>Jugar</span></button></div>
+            </li>
+            <li class="card">
+                <img class="img-juego" src="img/37.jpg" alt="imagen-juego">
+                <div class="contenedor-info">
+                    <h4>Pelota musical</h4>
+                    <div class="estrellas">
+                        <img src="img/estrella.png" alt="estrella" class="estrella">
+                        <img src="img/estrella.png" alt="estrella" class="estrella">
+                    </div>
+                    <p class="precio">$100</p>
+                </div>
+                <div class="contenedor-btn-card"><button class="ocultar btn-card"><span>Comprar</span></button></div>
+            </li>
+            <li class="card">
+                <img class="img-juego" src="img/38.jpg" alt="imagen-juego">
+                <div class="contenedor-info">
+                    <h4>Shrek V</h4>
+                    <div class="estrellas">
+                        <img src="img/estrella.png" alt="estrella" class="estrella">
+                        <img src="img/estrella.png" alt="estrella" class="estrella">
+                        <img src="img/estrella.png" alt="estrella" class="estrella">
+                        <img src="img/estrella.png" alt="estrella" class="estrella">
+                    </div>
+                    <p class="precio">$150</p>
+                </div>
+                <div class="contenedor-btn-card"><button class="ocultar btn-card"><span>Comprar</span></button></div>
+            </li>
+            <li class="card">
+                <img src="img/tag-gratis.png" alt="tag-gratis" class="tag-gratis">
+                <img class="img-juego" src="img/39.jpg" alt="imagen-juego">
+                <div class="contenedor-info">
+                    <h4>El ahorcado</h4>
+                    <div class="estrellas">
+                        <img src="img/estrella.png" alt="estrella" class="estrella">
+                        <img src="img/estrella.png" alt="estrella" class="estrella">
+                    </div>
+                </div>
+                <div class="contenedor-btn-card"><button class="ocultar btn-card"><span>Jugar</span></button></div>
+            </li>
+            <li class="card">
+                <img class="img-juego" src="img/40.jpg" alt="imagen-juego">
+                <div class="contenedor-info">
+                    <h4>Hombre-pulpo</h4>
+                    <div class="estrellas">
+                        <img src="img/estrella.png" alt="estrella" class="estrella">
+                    </div>
+                    <p class="precio">$150</p>
+                </div>
+                <div class="contenedor-btn-card"><button class="ocultar btn-card"><span>Comprar</span></button></div>
+            </li>
+            <img src="img/flecha.png" alt="flecha" class="flecha-sig">
+        </ul>
     </div>
-    <div class="input-comentario">
-        <div>
-            <img src="img/icono-comentarios.png" alt="icono comentarios" class="icono">
-            <h3>Comentarios</h3>
-        </div>
-        <input type="text" placeholder="¿Qué te parece este juego?">
-        <button>Enviar</button>
-    </div>
-    <div class="comentarios">
-        <h3>Lo que otros usuarios han comentado</h3>
-        <div>
-            <p>LautaroSan</p>
-            <p>Este juego está más bueno que la serie!</p>
-        </div>
-        <div>
-            <p>LeonelaLeonela</p>
-            <p>LautaroSan me gana todos los tiros :( </p>
-        </div>
-        <p>Mostrar más comentarios</p>
-        <div><img src="img/flecha-comentarios.png" alt="flecha"></div>
+    <div class="categorias">
+        <h3 id="tiros">Juegos de tiros</h3>
+        <ul class="carrusel">
+            <img src="img/flecha.png" alt="flecha" class="flecha-ant">
+            <li class="card">
+                <img class="img-juego" src="img/41.jpg" alt="imagen-juego">
+                <div class="contenedor-info">
+                    <h4>Fuera zombies</h4>
+                    <div class="estrellas">
+                        <img src="img/estrella.png" alt="estrella" class="estrella">
+                        <img src="img/estrella.png" alt="estrella" class="estrella">
+                        <img src="img/estrella.png" alt="estrella" class="estrella">
+                        <img src="img/estrella.png" alt="estrella" class="estrella">
+                        <img src="img/estrella.png" alt="estrella" class="estrella">
+                    </div>
+                    <p class="precio">$450</p>
+                </div>
+                <div class="contenedor-btn-card"><button class="ocultar btn-card"><span>Comprar</span></button></div>
+            </li>
+            <li class="card">
+                <img src="img/tag-gratis.png" alt="tag-gratis" class="tag-gratis">
+                <img class="img-juego" src="img/42.jpg" alt="imagen-juego">
+                <div class="contenedor-info">
+                    <h4>Muñeco bravo</h4>
+                    <div class="estrellas">
+                        <img src="img/estrella.png" alt="estrella" class="estrella">
+                        <img src="img/estrella.png" alt="estrella" class="estrella">
+                    </div>
+                </div>
+                <div class="contenedor-btn-card"><button class="ocultar btn-card"><span>Jugar</span></button></div>
+            </li>
+            <li class="card">
+                <img class="img-juego" src="img/43.jpg" alt="imagen-juego">
+                <div class="contenedor-info">
+                    <h4>Pistoleros</h4>
+                    <div class="estrellas">
+                        <img src="img/estrella.png" alt="estrella" class="estrella">
+                        <img src="img/estrella.png" alt="estrella" class="estrella">
+                        <img src="img/estrella.png" alt="estrella" class="estrella">
+                    </div>
+                    <p class="precio">$350</p>
+                </div>
+                <div class="contenedor-btn-card"><button class="ocultar btn-card"><span>Comprar</span></button></div>
+            </li>
+            <li class="card">
+                <img src="img/tag-gratis.png" alt="tag-gratis" class="tag-gratis">
+                <img class="img-juego" src="img/44.jpg" alt="imagen-juego">
+                <div class="contenedor-info">
+                    <h4>MSN armado</h4>
+                    <div class="estrellas">
+                        <img src="img/estrella.png" alt="estrella" class="estrella">
+                        <img src="img/estrella.png" alt="estrella" class="estrella">
+                        <img src="img/estrella.png" alt="estrella" class="estrella">
+                        <img src="img/estrella.png" alt="estrella" class="estrella">
+                    </div>
+                </div>
+                <div class="contenedor-btn-card"><button class="ocultar btn-card"><span>Jugar</span></button></div>
+            </li>
+            <li class="card">
+                <img class="img-juego" src="img/45.jpg" alt="imagen-juego">
+                <div class="contenedor-info">
+                    <h4>El tiroteador</h4>
+                    <div class="estrellas">
+                        <img src="img/estrella.png" alt="estrella" class="estrella">
+                        <img src="img/estrella.png" alt="estrella" class="estrella">
+                    </div>
+                    <p class="precio">$200</p>
+                </div>
+                <div class="contenedor-btn-card"><button class="ocultar btn-card"><span>Comprar</span></button></div>
+            </li>
+            <li class="card">
+                <img class="img-juego" src="img/46.jpg" alt="imagen-juego">
+                <div class="contenedor-info">
+                    <h4>Stormtroopers war</h4>
+                    <div class="estrellas">
+                        <img src="img/estrella.png" alt="estrella" class="estrella">
+                        <img src="img/estrella.png" alt="estrella" class="estrella">
+                        <img src="img/estrella.png" alt="estrella" class="estrella">
+                        <img src="img/estrella.png" alt="estrella" class="estrella">
+                    </div>
+                    <p class="precio">$200</p>
+                </div>
+                <div class="contenedor-btn-card"><button class="ocultar btn-card"><span>Comprar</span></button></div>
+            </li>
+            <li class="card">
+                <img class="img-juego" src="img/47.jpg" alt="imagen-juego">
+                <div class="contenedor-info">
+                    <h4>Tiros desde autos</h4>
+                    <div class="estrellas">
+                        <img src="img/estrella.png" alt="estrella" class="estrella">
+                    </div>
+                    <p class="precio">$100</p>
+                </div>
+                <div class="contenedor-btn-card"><button class="ocultar btn-card"><span>Comprar</span></button></div>
+            </li>
+            <li class="card">
+                <img class="img-juego" src="img/48.jpg" alt="imagen-juego">
+                <div class="contenedor-info">
+                    <h4>El detective picante</h4>
+                    <div class="estrellas">
+                        <img src="img/estrella.png" alt="estrella" class="estrella">
+                        <img src="img/estrella.png" alt="estrella" class="estrella">
+                    </div>
+                    <p class="precio">$150</p>
+                </div>
+                <div class="contenedor-btn-card"><button class="ocultar btn-card"><span>Comprar</span></button></div>
+            </li>
+            <li class="card">
+                <img src="img/tag-gratis.png" alt="tag-gratis" class="tag-gratis">
+                <img class="img-juego" src="img/49.jpg" alt="imagen-juego">
+                <div class="contenedor-info">
+                    <h4>El panda siniestro</h4>
+                    <div class="estrellas">
+                        <img src="img/estrella.png" alt="estrella" class="estrella">
+                        <img src="img/estrella.png" alt="estrella" class="estrella">
+                        <img src="img/estrella.png" alt="estrella" class="estrella">
+                    </div>
+                </div>
+                <div class="contenedor-btn-card"><button class="ocultar btn-card"><span>Jugar</span></button></div>
+            </li>
+            <li class="card">
+                <img src="img/tag-gratis.png" alt="tag-gratis" class="tag-gratis">
+                <img class="img-juego" src="img/50.jpg" alt="imagen-juego">
+                <div class="contenedor-info">
+                    <h4>El zombie verde</h4>
+                    <div class="estrellas">
+                        <img src="img/estrella.png" alt="estrella" class="estrella">
+                    </div>
+                </div>
+                <div class="contenedor-btn-card"><button class="ocultar btn-card"><span>Jugar</span></button></div>
+            </li>
+            <img src="img/flecha.png" alt="flecha" class="flecha-sig">
+        </ul>
     </div>
     <footer class="footer">
         <ul class="footer1">
@@ -168,11 +765,8 @@
             <img src="img/redes5.png" alt="icono youtube" class="icono-redes">
          </div>
     </footer>
-    <script src="js/jugador.js"></script>
-    <script src="js/tablero.js"></script>
-    <script src="js/ficha.js"></script>
-    <script src="js/cuadradoTablero.js"></script>
-    <script src="js/general.js"></script>
+    <script src="js/home.js"></script>
     <script src="js/menu.js"></script>
 </body>
+
 </html>
