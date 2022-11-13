@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Mohave:wght@400;600;700&family=Monofett&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/styleDragones.css">
+    <title>Dragones en línea</title>
+</head>
+<body>
+    <div id="overlay" class="overlay ocultar"></div>
+    <header id="header" class="header">
+        <div>
+            <a href="index.html"><img src="img/logo.png" alt="Logo" class="logo"></a>
+            <a href="index.html">
+                <h1 class="texto-header">On Gaming</h1>
+            </a>
+        </div>
+        <div>
+            <div class="redes">
+                <img src="img/redes1.png" alt="icono instagram" class="icono-redes">
+                <img src="img/redes2.png" alt="icono twitch" class="icono-redes">
+                <img src="img/redes3.png" alt="icono twitter" class="icono-redes">
+                <img src="img/redes4.png" alt="icono facebook" class="icono-redes">
+                <img src="img/redes5.png" alt="icono youtube" class="icono-redes">
+             </div>
+            <img src="img/menu.png" id="btn-hamburguesa" class="menu"></img>
+            <ul id="menu-hamburguesa" class="ocultar">
+                <li class="animated-button">Redes</li>
+                <li class="animated-button">Mis datos</li>
+                <li class="animated-button">Cargar saldo</li>
+                <li class="animated-button">Historial</li>
+                <li class="animated-button">Mis compras</li>
+                <li class="animated-button">FAQS</li>
+                <li class="animated-button">Log out</li>
+            </ul>
+        </div>
+    </header>
+    <div class="nav ocultar" id="categorias">Categorías</div>
+    <ul class="ocultar" id="lista-categorias">
+        <a href="index.html">
+            <li>Inicio</li>
+        </a>
+        <li>></li>
+        <li>Recomendados para ti</li>
+        <li>></li>
+        <li>Dragones en línea</li>
+    </ul>
+    <div class="contenedor-juego">
+        <img src="img/casadragon.jpg" alt="foto serie" class="img-juego">
+        
+        <div>
+            <div class="iconos">
+                <img src="img/icono-estrella.png" alt="icono estrella" class="icono">
+                <img src="img/icono-compartir.png" alt="icono compartir" class="icono">
+            </div>
+            <div id="contenedor-descripcion">
+                <p>¡Alinea tus dragones y sé el heredero al trono de hierro!</p>
+                <button id="btn-descripcion" class="btn-jugar">Jugar</button>
+            </div>
+            <div id="contenedor-fichas" class="ocultar">
+                <p>Jugador 1</p>
+                <img src="img/dragon1.png" alt="ficha dragon 1" class=" ficha1ASelec" data-src ="img/dragon1.png">
+                <img src="img/dragon2.png" alt="ficha dragon 2" class=" ficha1ASelec" data-src ="img/dragon2.png">
+                <img src="img/dragon3.png" alt="ficha dragon 3" class=" ficha1ASelec" data-src ="img/dragon3.png">
+                <img src="img/dragon4.png" alt="ficha dragon 4" class=" ficha1ASelec" data-src ="img/dragon4.png">
+                <p>Jugador 2</p>
+                <img src="img/dragon1.png" alt="ficha dragon 1" class=" ficha2ASelec" data-src ="img/dragon1.png">
+                <img src="img/dragon2.png" alt="ficha dragon 2" class=" ficha2ASelec" data-src ="img/dragon2.png">
+                <img src="img/dragon3.png" alt="ficha dragon 3" class=" ficha2ASelec" data-src ="img/dragon3.png">
+                <img src="img/dragon4.png" alt="ficha dragon 4" class=" ficha2ASelec" data-src ="img/dragon4.png">
+                <button id="btn-jugar" class="btn-jugar">¡Listo!</button>
+            </div>
+        </div>
+    </div>
+    <div class="canva-container ocultar">
+        <div>
+            <button class="btn-modalidad" value="5">4 en línea</button>
+            <button class="btn-modalidad" value="6">5 en línea</button>
+            <button class="btn-modalidad" value="7">6 en línea</button>
+            <button class="btn-modalidad" value="8">7 en línea</button>
+        </div>
+        <canvas id="canvas" width="900" height="700" style="border: 1px solid black;"></canvas>
+        <div></div>
+    </div>
+    <div class="div-center gallery">
+        <div class="carousel">
+            <figure><img src="img/galeria10.jpg" alt="imagen juego"></figure>
+            <figure><img src="img/galeria11.jpg" alt="imagen juego"></figure>
+            <figure><img src="img/galeria1.jpg" alt="imagen juego"></figure>
+            <figure><img src="img/galeria2.jpg" alt="imagen juego"></figure>
+            <figure><img src="img/galeria3.jpg" alt="imagen juego"></figure>
+            <figure><img src="img/galeria4.jpg" alt="imagen juego"></figure>
+            <figure><img src="img/galeria5.jpg" alt="imagen juego"></figure>
+            <figure><img src="img/galeria6.jpg" alt="imagen juego"></figure>
+            <figure><img src="img/galeria7.jpg" alt="imagen juego"></figure>
+        </div>
+    </div>
+    <div class="instrucciones">
+        <div>
+            <img src="img/icono-instrucciones.png" alt="icono instrucciones" class="icono">
+            <h3>¿Cómo se juega?</h3>
+        </div>
+        <p>En su turno, cada jugador coloca una ficha de su dragón en una columna y esta cae hasta la primera casilla
+            disponible. El que consigue ubicar la cantidad necesaria de fichas del mismo dragón seguidas en horizontal, vertical u oblicuo,
+            gana. Si nadie lo consigue la partida termina en empate.</p>
+    </div>
+    <div class="input-comentario">
+        <div>
+            <img src="img/icono-comentarios.png" alt="icono comentarios" class="icono">
+            <h3>Comentarios</h3>
+        </div>
+        <input type="text" placeholder="¿Qué te parece este juego?">
+        <button>Enviar</button>
+    </div>
+    <div class="comentarios">
+        <h3>Lo que otros usuarios han comentado</h3>
+        <div>
+            <p>LautaroSan</p>
+            <p>Este juego está más bueno que la serie!</p>
+        </div>
+        <div>
+            <p>LeonelaLeonela</p>
+            <p>LautaroSan me gana todos los tiros :( </p>
+        </div>
+        <p>Mostrar más comentarios</p>
+        <div><img src="img/flecha-comentarios.png" alt="flecha"></div>
+    </div>
+    <footer class="footer">
+        <ul class="footer1">
+            <li class="h2">Acerca de nosotros</li>
+            <li class="h3">Desarrolladores</li>
+            <li class="h3">On gaming</li>
+            <li class="h3">Nuestra visión</li>
+        </ul>
+        <ul class="footer2">
+            <li class="h2">Nuestros juegos</li>
+            <li class="h3">Recomendados</li>
+            <li class="h3">Aventuras</li>
+            <li class="h3">Estrategia</li>
+            <li class="h3">2 jugadores</li>
+            <li class="h3">Tiros</li>
+        </ul>
+        <ul class="footer3">
+            <li class="h2">Legales</li>
+            <li class="h3">Términos de uso</li>
+            <li class="h3">Protección de datos</li>
+            <li class="h3">Política de privacidad</li>
+        </ul>
+        <ul class="footer4">
+            <li class="h2">Contacto</li>
+            <li class="h3">Contactate con nosotros</li>
+            <li class="h3">Dejanos tu CV</li>
+            <li class="h3">Preguntas frecuentes</li>
+        </ul>
+        <a href="#header"><img src="img/flecha.png" alt="Flecha_arriba" class="flecha-arriba"></a>
+        <div class="redes footer-redes">
+            <img src="img/redes1.png" alt="icono instagram" class="icono-redes">
+            <img src="img/redes2.png" alt="icono twitch" class="icono-redes">
+            <img src="img/redes3.png" alt="icono twitter" class="icono-redes">
+            <img src="img/redes4.png" alt="icono facebook" class="icono-redes">
+            <img src="img/redes5.png" alt="icono youtube" class="icono-redes">
+         </div>
+    </footer>
+    <script src="js/jugador.js"></script>
+    <script src="js/tablero.js"></script>
+    <script src="js/ficha.js"></script>
+    <script src="js/cuadradoTablero.js"></script>
+    <script src="js/general.js"></script>
+    <script src="js/menu.js"></script>
+</body>
+</html>

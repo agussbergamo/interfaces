@@ -1,0 +1,233 @@
+body{
+    background-color: #0E0C0C;
+}
+
+/* Breadcrumbs */
+
+div.nav+ul {
+    text-align: center;
+    font-family: 'Mohave', sans-serif;
+    color: #fffef8;
+    background-color: #0e978f;
+    display: flex;
+    font-size: 30px;
+}
+
+div.nav+ul li {
+    padding: 5px 10px 5px;
+}
+
+/* Fondo matrix */
+
+.fondo-matrix {
+    background: black;
+    height: 600px;
+    width: 100%;
+    position: absolute;
+}
+
+/* Div info */
+
+#texto-matrix{
+    width: 805px;
+    height: 151px;
+}
+
+.info{
+    /*background: url(../img/fondomatrix.png);*/
+    position: relative;
+    width: 100%;
+    height: 600px;
+}
+
+.info>div{
+    font-family: 'Bahiana', cursive;
+    font-size: 60px;
+    color: #fffef8;
+}
+
+.info div:nth-child(1), .info div:nth-child(2), .info div:nth-child(3), .info div:nth-child(4){
+    display: flex; 
+    justify-content: center;
+    align-items: flex-end;
+    padding: 20px;
+}
+
+/* Call to action */
+
+.call-to-action{
+    font-family: 'Bahiana', cursive;
+    font-size: xx-large;
+    color: #fffef8;
+    width: 100%;
+    height: 220px;
+    display: flex; 
+    justify-content: center;
+}
+
+.call-to-action img {
+    width: 232px;
+    height: 200px;
+    align-self: flex-end;
+    margin-right: 20px;
+}
+
+.call-to-action div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.call-to-action p{
+    font-size: 50px;
+}
+
+.call-to-action button {
+    background-color: #85b27e;
+    border: solid;
+    border-color: black;
+    border-radius: 10px;
+    height: 60px;
+    width: 190px;
+    margin-top: 10px;
+    font-family: 'Bahiana', cursive;
+    font-size: larger;
+    cursor: pointer;
+}
+
+
+/* Fondo animado */
+
+.fondo-animado{
+    position: relative;
+    height: 1000px;
+}
+
+.fondo-animado img:nth-child(1){
+    position: absolute; 
+    z-index: auto; 
+    width: 100%;
+}
+
+.fondo-animado img:nth-child(2){
+    position: absolute; 
+    z-index: 2; 
+    width: 100%;
+}
+
+.fondo-animado img:nth-child(3){
+    position: absolute; 
+    z-index: 3; 
+    width: 50%;
+    left: 25%;
+    right: 25%;
+}
+
+.fondo-animado img:nth-child(4){
+    position: absolute; 
+    z-index: 4; 
+    width: 40%;
+    left: 30%;
+    right: 30%;
+    top: 40px;
+}
+
+.fondo-animado img:nth-child(5){
+    position: absolute; 
+    z-index: 5; 
+    width: 100%;
+    bottom: 0px;
+}
+
+
+/* Formato general personajes, descripción y features */
+
+.seccion{
+    padding: 30px 70px 30px;
+    font-family: 'Mohave', sans-serif;
+    font-size: 20px;
+    color: #fffef8;
+}
+
+.seccion h3{
+    padding-bottom: 20px;
+}
+
+
+/* Descripcion */
+
+.descripcion p{
+    margin-bottom: 10px;
+}
+
+
+/* Personajes */
+
+.personajes{
+    display: flex; 
+    justify-content: space-between;
+}
+
+.personajes img {
+    border-radius: 10px;
+    margin: 5px;
+}
+
+.personaje{
+    position: relative;
+    width: 423px;
+    height: 485px;
+}
+
+.personaje img{
+    position: absolute; 
+    z-index: 1;
+}
+
+.personaje div{
+    position: absolute;
+    z-index: 2;
+    width: 423px;
+    padding: 70px 45px 70px;
+}
+
+.personaje div p{
+    font-size: 40px;
+    padding: 10px 0px 10px;
+    text-align: center;
+}
+
+.habilidades p:first-child{
+    border-bottom: solid 1px #fffef8;
+}
+
+.personaje div ul li{
+    font-size: 30px;
+    list-style: inside;
+}
+
+.blur{
+    filter: blur(5px);
+}
+
+
+/* Features */
+
+.features div {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+    margin: 10px 20% 10px; 
+    row-gap: 20px;
+}
+
+.features div p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(../img/fondo-features.png);
+    border-radius: 15px;
+    height: 50px;
+    width: 180px;
+}
