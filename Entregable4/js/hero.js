@@ -76,3 +76,39 @@ var x = setInterval(function() {
     document.getElementById("cuenta-regresiva").innerHTML = "¡YA ESTÁ DISPONIBLE!";
   }
 }, 1000);
+
+
+// pruebas de seccion hero
+
+
+window.addEventListener("scroll",function(){
+  let scrollY = this.scrollY;
+  let ciudad = document.querySelector ("#bg");
+  let maquina = document.querySelector ("#maquinas");
+  let luz = document.querySelector ("#luz");
+  let neo = document.querySelector ("#neo");
+  let niebla = document.querySelector ("#niebla");
+  let hero = document.querySelector(".fondo-animado");
+  let opacityHero = scrollY/hero.offsetTop;
+  let morpheus = document.querySelector(".call-to-action");
+  let posMorpheus = 800 -(scrollY*2);
+  morpheus.style.left = `${posMorpheus}px`
+
+  if(scrollY >=700 && scrollY <=1200){
+  ciudad.style.opacity = "1"
+  ciudad.style.transform = "scale(2.5)";
+  maquina.style.opacity = "0";
+  luz.style.transform ="scale(5.5)";
+  neo.style.transform ="scale(1)";
+  niebla.style.opacity = "1";
+  hero.style.opacity = `${opacityHero}`;
+  }else{
+  ciudad.style.opacity = ""
+  ciudad.style.transform = "";
+  maquina.style.opacity = "";
+  luz.style.transform ="";
+  neo.style.transform ="";
+  niebla.style.opacity = "";
+  hero.style.opacity = "";
+  }
+})
