@@ -4,9 +4,13 @@
 
 let overlay = document.querySelector("#overlay");
 let menu = document.querySelector("#menu-hamburguesa");
+let lis = menu.querySelectorAll(".animated-button");
 overlay.addEventListener("click",()=>{
     spans.forEach(function(s){
         s.classList.toggle("open");
+    })
+    lis.forEach(function(li){
+        li.classList.toggle("aumentado");
     })
     overlay.classList.toggle("ocultar");
     menu.classList.toggle("aumentar");
@@ -24,6 +28,9 @@ function desplegarMenu(params) {
 
 function aumentar(params) {
     menu.classList.toggle("aumentar");
+    lis.forEach(function(li){
+        li.classList.toggle("aumentado");
+    })
 }
 
 function ocultar(params) {

@@ -74,7 +74,6 @@ header ul.aumentar {
 
 header ul li {
     background-color: #0E978F;
-    color: #fffef8;
     font-family: 'Mohave', sans-serif;
     font-weight: 600;
     margin-top: 4px;
@@ -222,11 +221,7 @@ header ul li {
         padding: 8px;
     }
 
-    header ul li:hover {
-        cursor: pointer;
-        background: #fffef8;
-        color: #0e978f;
-    }
+   
 
     /* hover menu hamburguesa*/
     header ul li.animated-button::after {
@@ -254,6 +249,36 @@ header ul li {
         color: #fff;
         overflow: hidden;
         transition: all 1s ease;
+        transform: translateX(350px);
+    }
+
+    header ul li.aumentado{
+        transform: translateX(0px);
+    }
+    header ul li:nth-child(1).aumentado{
+        transition-delay: 0.1s;
+    }
+    header ul li:nth-child(2).aumentado{
+        transition-delay: 0.2s;
+    }
+    header ul li:nth-child(3).aumentado{
+        transition-delay: 0.3s;
+    }
+    header ul li:nth-child(4).aumentado{
+        transition-delay: 0.4s;
+    }
+    header ul li:nth-child(5).aumentado{
+        transition-delay: 0.5s;
+    }
+    header ul li:nth-child(6).aumentado{
+        transition-delay: 0.6s;
+    }
+    header ul li:nth-child(7).aumentado{
+        transition-delay: 0.7s;
+    }
+    header ul li.aumentado:hover {
+        color: #0e978f;
+        transition-delay: 0s;
     }
 
     header ul li.animated-button {
