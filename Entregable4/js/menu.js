@@ -5,6 +5,9 @@
 let overlay = document.querySelector("#overlay");
 let menu = document.querySelector("#menu-hamburguesa");
 overlay.addEventListener("click",()=>{
+    spans.forEach(function(s){
+        s.classList.toggle("open");
+    })
     overlay.classList.toggle("ocultar");
     menu.classList.toggle("aumentar");
     setTimeout(ocultar,400);
@@ -26,3 +29,12 @@ function aumentar(params) {
 function ocultar(params) {
     menu.classList.toggle("ocultar");
 }
+
+/* animacion menu hamburguesa*/ 
+
+let spans = btnHamburguesa.querySelectorAll(".capas-hamburguesa");
+btnHamburguesa.addEventListener("click",function(){
+    spans.forEach(function(s){
+        s.classList.toggle("open");
+    })
+})
