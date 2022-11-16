@@ -153,12 +153,13 @@ div.nav+ul li {
     right: 25%;
     top: 175px;
     animation: luz 1.5s linear infinite;
-    transform: scale(0.05);
+    transform: scale(0.5);
     transition: all 3s ease-in-out;
 }
 @keyframes luz{
     0%{
         opacity: 1;
+       
     }
     50%{
         opacity: 0.8;
