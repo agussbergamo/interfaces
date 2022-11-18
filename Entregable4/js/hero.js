@@ -90,6 +90,7 @@ window.addEventListener("scroll",function(){
   let niebla = document.querySelector ("#niebla");
   let hero = document.querySelector(".fondo-animado");
   let opacityHero = scrollY/hero.offsetTop;
+  let h1Hero = document.querySelectorAll(".spanHero");
   let morpheus = document.querySelector(".call-to-action");
   let posMorpheus = 800 -(scrollY*2);
   morpheus.style.left = `${posMorpheus}px`
@@ -99,16 +100,56 @@ window.addEventListener("scroll",function(){
   ciudad.style.transform = "scale(2.5)";
   maquina.style.opacity = "0";
   luz.style.transform ="scale(5.5)";
+  luz.style.left = "14%";
   neo.style.transform ="scale(1)";
   niebla.style.opacity = "1";
   hero.style.opacity = `${opacityHero}`;
+  h1Hero.forEach(function(e){
+    e.style.opacity=`${opacityHero}`;
+  })
   }else{
   ciudad.style.opacity = ""
   ciudad.style.transform = "";
   maquina.style.opacity = "";
   luz.style.transform ="";
+  luz.style.left = "";
   neo.style.transform ="";
   niebla.style.opacity = "";
   hero.style.opacity = "";
+  h1Hero.forEach(function(e){
+    e.style.opacity="";
+  })
   }
+
+  textos.forEach(function(t){
+    t.classList.add("oculto")
 })
+imgs.forEach(function(t){
+    t.classList.add("imgOculta")
+})
+if(scrollY<2300){
+  textos[0].classList.remove("oculto");
+  imgs[0].classList.remove("imgOculta");
+}
+else if(scrollY >= 2300 && scrollY <2600){
+  textos[1].classList.remove("oculto");
+  imgs[1].classList.remove("imgOculta");
+}else if(scrollY >=2600 && scrollY < 3000){
+  textos[2].classList.remove("oculto")
+  imgs[2].classList.remove("imgOculta");
+}else{
+  textos[3].classList.remove("oculto");
+  imgs[3].classList.remove("imgOculta");
+}
+
+})
+
+let textos = document.querySelectorAll(".texto");
+let imgs = document.querySelectorAll(".img");
+
+/*window.addEventListener("scroll",function(){
+    let scrollY = window.scrollY;
+   
+    
+
+})*/

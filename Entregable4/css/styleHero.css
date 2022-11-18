@@ -109,6 +109,22 @@ div.nav+ul li {
     transition: all 2s linear;
 }
 
+.spanHero{
+    position: absolute;
+    color: #fffef8;
+    top:40%;
+    left:38%;
+    z-index: 5;
+    font-size: xxx-large;
+    opacity: 0;
+    transition: opacity 3s ease-in-out;
+}
+
+.spanHero:last-of-type{
+    color: #0E0C0C;
+    left:55%;
+}
+
 .fondo-animado img:nth-child(1){
     position: absolute; 
     z-index: auto; 
@@ -149,7 +165,7 @@ div.nav+ul li {
     position: absolute; 
     z-index: 3; 
     width: 50%;
-    left: 25%;
+    left: 24%;
     right: 25%;
     top: 175px;
     animation: luz 1.5s linear infinite;
@@ -218,6 +234,7 @@ div.nav+ul li {
 
 .seccion h3{
     padding-bottom: 20px;
+    text-align: center;
 }
 
 
@@ -305,7 +322,7 @@ div.nav+ul li {
     align-items: center;
     justify-content: space-evenly;
     background-color: #152036;
-    height: 180px;
+    height: 120px;
   }
   
   .sprite{
@@ -386,4 +403,82 @@ div.nav+ul li {
     100%{
       background-position-x: -576px;
     }
+  }
+
+  /* imagen y texto scroll*/
+.contenedorSticky{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+  }
+  .textoScroll{
+    width: 50%;
+  }
+  
+  .texto:last-of-type{
+    margin-bottom: auto;
+    padding: 0;
+  }
+
+  .texto:first-of-type{
+    padding: 25% 0;
+  }
+  
+  
+  
+  .stickyScroll{
+    position: sticky;
+    width: 50%;
+    height: 100%;
+    top: 15%;
+  }
+  
+  .texto{
+    height: 300px;
+    color: #fffef8;
+    margin: 25px 50px 100px 50px;
+    transition: opacity .4s ease-in-out;
+    text-align: center;
+    font-size: xx-large;
+   
+  }
+  
+  .img{
+    height: 400px;
+    background-color: antiquewhite;
+    margin: 25px;
+    
+  }
+  .img:last-of-type{
+    margin-bottom: auto;
+  }
+  
+  .oculto{
+    opacity: 0;
+  }
+  
+  .imgOculta{
+    display: none;
+  }
+  
+  div.img:nth-child(1){
+    background: url(../img/machinecity.jpg);
+    background-size: cover;
+    
+  }
+  div.img:nth-child(2){
+    background:url(../img/mission.jpg);
+    background-size: cover;
+  }
+  div.img:nth-child(3){
+    
+    background:url(../img/pills2.jpg);
+    background-size: cover;
+    background-position: -40px;
+  }
+  div.img:nth-child(4){
+   
+   background:url(../img/neosmith.jpeg);
+    background-size: cover;
+    background-position: -80px;
   }
