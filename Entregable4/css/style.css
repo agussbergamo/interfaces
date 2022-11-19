@@ -117,7 +117,7 @@ header ul li {
     background-color: #2A2F3A;
     display: grid;
     grid-template-areas: "footer1 footer2 footer3 footer4"
-        "flecha-arriba . . footer-redes";
+        ". . . footer-redes";
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 3fr 1fr;
     justify-items: center;
@@ -147,13 +147,6 @@ header ul li {
 .footer-redes {
     grid-area: footer-redes;
     cursor: pointer;
-}
-
-.flecha-arriba {
-    grid-area: flecha-arriba;
-    width: 15px;
-    height: 15px;
-    transform: rotate(270deg);
 }
 
 .h2,
@@ -246,6 +239,7 @@ header ul li {
     }
 
     /* menu hamburguesa*/
+
     header ul {
         width: 10%;
     }
@@ -349,12 +343,6 @@ header ul li {
     .h3 {
         font-size: 15px;
     }
-
-    .flecha-arriba {
-        width: 20px;
-        height: 20px;
-    }
-
 
 }
 /* hamburguesa animada*/

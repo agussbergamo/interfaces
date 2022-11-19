@@ -26,9 +26,10 @@ div.nav+ul li:nth-child(odd):hover {
     width: 900px;
     height: 700px;
     position: relative;
-    margin-top: 40px;
+    /*margin-top: 40px;
     margin-left: auto;
-    margin-right: auto;
+    margin-right: auto;*/
+    margin: 40px auto 70px;
     display: flex;
 }
 
@@ -43,6 +44,7 @@ div.nav+ul li:nth-child(odd):hover {
     border-radius: 100%;
     border: solid 1px white;
 }
+
 .contenedor-juego div.iconos ~ div img.selected{
     border: solid 4px #77F4ED;
 }
@@ -56,7 +58,6 @@ div.nav+ul li:nth-child(odd):hover {
     margin-top: 80px;
     padding: 20px;
 }
-
 
 .img-juego {
     height: 698px;
@@ -93,6 +94,7 @@ div.contenedor-juego.ocultar{
     display: flex;
     justify-content: space-evenly;
     margin-top: 40px;
+    margin-bottom: 70px;
 }
 
 .canva-container div{
@@ -134,71 +136,6 @@ div.contenedor-juego.ocultar{
     width: 80px;
     height: 30px;
     font-size: large;
-}
-
-/* Galeria */
-
-.div-center-{
-    width: 100%;
-    text-align: center;
-  }
-  
-  .gallery {
-    margin: 6% auto 10%;
-    width: 210px;
-    height: 140px;
-    position: relative;
-    perspective: 1000px;}
-    
-  .carousel{
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    transform-style: preserve-3d;
-    animation: rotation 20s infinite linear;
-  }
-  .carousel:hover{
-    animation-play-state: paused;
-  }
-  .carousel figure{
-    display: block;
-    position: absolute;
-    width: 95%;
-    height: 120%;
-    left: 10px;
-    top: 10px;
-    background: black;
-    border: solid 1px #fffef8;
-  }
-
-.carousel figure:nth-child(1){transform: rotateY(0deg) translateZ(288px);}
-.carousel figure:nth-child(2){ transform: rotateY(40deg) translateZ(288px);}
-.carousel figure:nth-child(3){ transform: rotateY(80deg) translateZ(288px);}
-.carousel figure:nth-child(4){ transform: rotateY(120deg) translateZ(288px);}
-.carousel figure:nth-child(5){ transform: rotateY(160deg) translateZ(288px);}
-.carousel figure:nth-child(6){ transform: rotateY(200deg) translateZ(288px);}
-.carousel figure:nth-child(7){ transform: rotateY(240deg) translateZ(288px);}
-.carousel figure:nth-child(8){ transform: rotateY(280deg) translateZ(288px);}
-.carousel figure:nth-child(9){ transform: rotateY(320deg) translateZ(288px);}
-.carousel figure:nth-child(10){ transform: rotateY(360deg) translateZ(288px);}
-
-.carousel img{
-  filter:saturate(0.5);
-  cursor: pointer;
-  transition: all .5s ease;
-  width: 100%;
-}
-.carousel img:hover{
-  filter: saturate(1);
-  transform: scale(1.2,1.2);
-}
-@keyframes rotation{
-  from{
-      transform: rotateY(0deg);
-  }
-  to{
-      transform: rotateY(360deg);
-  }
 }
 
 /* Instrucciones y comentarios */

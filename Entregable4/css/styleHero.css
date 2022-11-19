@@ -113,11 +113,12 @@ div.nav+ul li {
     position: absolute;
     color: #fffef8;
     top:40%;
-    left:38%;
+    left:40%;
     z-index: 5;
     font-size: xxx-large;
     opacity: 0;
     transition: opacity 3s ease-in-out;
+    font-family: 'Bahiana', cursive;
 }
 
 .spanHero:last-of-type{
@@ -228,12 +229,12 @@ div.nav+ul li {
 .seccion{
     padding: 30px 70px 30px;
     font-family: 'Mohave', sans-serif;
-    font-size: 20px;
+    font-size: 25px;
     color: #fffef8;
 }
 
 .seccion h3{
-    padding-bottom: 20px;
+    padding-bottom: 40px;
     text-align: center;
 }
 
@@ -244,6 +245,9 @@ div.nav+ul li {
     margin-bottom: 10px;
 }
 
+.texto{
+  font-family: 'Mohave', sans-serif;
+}
 
 /* Personajes */
 

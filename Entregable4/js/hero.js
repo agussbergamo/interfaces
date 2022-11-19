@@ -77,8 +77,7 @@ var x = setInterval(function() {
 }, 1000);
 
 
-// pruebas de seccion hero
-
+// Animaciones parallax y cards
 
 window.addEventListener("scroll",function(){
   let scrollY = this.scrollY;
