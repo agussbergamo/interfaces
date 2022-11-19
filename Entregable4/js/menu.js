@@ -45,3 +45,40 @@ btnHamburguesa.addEventListener("click",function(){
         s.classList.toggle("open");
     })
 })
+
+
+/* Sticky header */
+
+window.onscroll = function() {stickyHeader()};
+
+let header = document.querySelector("#header");
+let logo = document.querySelector(".logo");
+let texto_header = document.querySelector(".texto-header");
+let icono_redes = document.querySelectorAll(".icono-redes");
+let menu_hamburguesa = document.querySelectorAll(".capas-hamburguesa");
+
+let sticky = header.offsetTop;
+
+function stickyHeader() {
+  if (window.pageYOffset > sticky) {
+    header.classList.add("sticky");
+    logo.classList.add("sticky");
+    texto_header.classList.add("sticky");
+    icono_redes.forEach(element => {
+      element.classList.add("sticky");
+    });
+    menu_hamburguesa.forEach(element => {
+      element.classList.add("sticky");
+    });
+  } else {
+    header.classList.remove("sticky");
+    logo.classList.remove("sticky");
+    texto_header.classList.remove("sticky");
+    icono_redes.forEach(element => {
+      element.classList.remove("sticky");
+    });
+    menu_hamburguesa.forEach(element => {
+      element.classList.remove("sticky");
+    });
+  }
+}

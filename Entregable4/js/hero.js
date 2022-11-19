@@ -149,7 +149,6 @@ let imgs = document.querySelectorAll(".img");
 
 /*window.addEventListener("scroll",function(){
     let scrollY = window.scrollY;
-   
-    
-
 })*/
+
+

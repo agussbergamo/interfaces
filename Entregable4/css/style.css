@@ -23,7 +23,7 @@ body {
     right: 0;
     bottom: 0;
     background-color: rgba(0, 0, 0, 0.5);
-    z-index: 2;
+    z-index: 6;
 }
 
 /* Links */
@@ -63,7 +63,7 @@ header ul {
     position: absolute;
     top: 80px;
     right: 3px;
-    z-index: 6;
+    z-index: 8;
     width: 22%;
     transition: all 0.5s;
 }
@@ -188,11 +188,48 @@ header ul li {
         background-color: #2A2F3A;
         height: 100px;
         justify-content: space-between;
+        position: sticky;
+        top: 0;
+        z-index: 6;
     }
 
     .texto-header {
         font-size: 8ex;
     }
+
+    /*Sticky header*/
+
+    .header.sticky{
+        height: 80px;
+        transition: height 0.1s ease-in;
+    }
+
+    .logo.sticky {
+        width: 35px;
+        height: 35px;
+        cursor: pointer;
+        transition: height 0.1s ease-in;
+    }
+
+    .texto-header.sticky {
+        font-size: 5ex;
+        margin: 15px;
+        transition: height 0.1s ease-in;
+    }
+
+    .icono-redes.sticky {
+        height: 18px;
+        width: 18px;
+        transition: height 0.1s ease-in;
+    }
+
+    .capas-hamburguesa.sticky{
+
+        width: 20px;
+        margin: 3px;
+        transition: height 0.1s ease-in;
+    }
+
 
     /* redes header */
 
@@ -324,7 +361,7 @@ header ul li {
 .hamburguesa{
   display: flex;
   flex-direction: column;
-  z-index: 2;
+  z-index: 8;
 }
 
 .capas-hamburguesa{

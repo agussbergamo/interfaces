@@ -9,7 +9,7 @@
     right: 0;
     bottom: 0;
     background-color: #434E68; 
-    z-index: 3;
+    z-index: 7;
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -107,7 +107,6 @@
       transform: scale(1.5);
     }
   }
-
 
 
 /* Header */

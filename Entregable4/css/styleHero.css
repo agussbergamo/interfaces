@@ -264,13 +264,12 @@ div.nav+ul li {
 }
 
 .personaje img{
-    position: absolute; 
-    z-index: 1;
+    position: absolute;
 }
 
 .personaje div{
     position: absolute;
-    z-index: 2;
+    z-index: 1;
     width: 423px;
     padding: 70px 45px 70px;
 }
