@@ -60,7 +60,6 @@ setInterval(draw, 30);
 
 
 //Cuenta regresiva
-
 var fechaLimite = new Date("Dec 12, 2022 15:37:25").getTime();
 var x = setInterval(function() {
   var hoy = new Date().getTime();

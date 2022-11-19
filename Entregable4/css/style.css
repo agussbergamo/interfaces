@@ -9,6 +9,7 @@
 body {
     background-color: #434E68;
     height: 100%;
+    overflow-x: hidden;
 }
 
 
