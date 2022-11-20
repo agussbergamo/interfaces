@@ -106,11 +106,9 @@ function mostrarBoton(params){
     
 }
 
-
 /* hover btn card*/ 
 
 let botonesCard = document.querySelectorAll(".btn-card");
-
 
 for (const boton of botonesCard) {
     boton.addEventListener("mousemove",asignarHover)
@@ -132,3 +130,15 @@ btn4EnLineas.addEventListener("click",()=> {
     location.href = './dragones-en-linea.html';
 
 })
+
+/* footer desplegable */
+
+let gruposFooter = document.querySelectorAll(".grupoFooter");
+for (const grupo of gruposFooter) {
+    grupo.addEventListener("click", desplegarFooter);
+}
+
+function desplegarFooter(){
+    let itemsFooter = this.querySelector(".itemsFooter");
+    itemsFooter.classList.toggle("ocultar");
+}

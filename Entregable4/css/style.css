@@ -105,49 +105,37 @@ header ul li {
     cursor: pointer;
 }
 
+/* hamburguesa animada*/
 
-/*Footer*/
+.hamburguesa {
+    display: flex;
+    flex-direction: column;
+    z-index: 8;
+}
 
-.footer {
-    height: 150px;
-    padding: 20px;
-    position: relative;
-    bottom: 0px;
-    width: 100%;
-    background-color: #2A2F3A;
-    display: grid;
-    grid-template-areas: "footer1 footer2 footer3 footer4"
-        ". . . footer-redes";
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 3fr 1fr;
-    justify-items: center;
+.capas-hamburguesa {
+    border-top: solid 2px #FFFEF8;
+    width: 25px;
+    transition: transform 0.8s, opacity 0.5s;
+    margin: 5px;
 
 }
 
-.footer1 {
-    grid-area: footer1;
-    cursor: pointer;
+.capa-1.open {
+    transform: translateY(12px) rotate(405deg);
+
 }
 
-.footer2 {
-    grid-area: footer2;
-    cursor: pointer;
+.capa-2.open {
+    transform: rotate(-405deg);
+
 }
 
-.footer3 {
-    grid-area: footer3;
-    cursor: pointer;
+.capa-3.open {
+    transform: translateY(-15px);
+    opacity: 0;
 }
 
-.footer4 {
-    grid-area: footer4;
-    cursor: pointer;
-}
-
-.footer-redes {
-    grid-area: footer-redes;
-    cursor: pointer;
-}
 
 .h2,
 .h3 {
@@ -172,6 +160,30 @@ header ul li {
     margin: 1px;
 }
 
+
+/* Footer */
+
+.footer {
+    /*height: 150px;*/
+    padding: 20px 30px 20px;
+    position: relative;
+    bottom: 0px;
+    width: 100%;
+    background-color: #2A2F3A;
+}
+
+.h2 {
+    font-size: 15px;
+}
+
+.h3 {
+    font-size: 13px;
+}
+
+.grupoFooter, .footer-redes{
+    margin: 5px;
+}
+
 @media only screen and (min-width: 1024px) {
 
     /* Header */
@@ -193,7 +205,7 @@ header ul li {
 
     /*Sticky header*/
 
-    .header.sticky{
+    .header.sticky {
         height: 80px;
         transition: height 0.1s ease-in;
     }
@@ -217,7 +229,7 @@ header ul li {
         transition: height 0.1s ease-in;
     }
 
-    .capas-hamburguesa.sticky{
+    .capas-hamburguesa.sticky {
 
         width: 20px;
         margin: 3px;
@@ -253,9 +265,8 @@ header ul li {
         padding: 8px;
     }
 
-   
-
     /* hover menu hamburguesa*/
+
     header ul li.animated-button::after {
         content: "";
         position: absolute;
@@ -284,30 +295,38 @@ header ul li {
         transform: translateX(350px);
     }
 
-    header ul li.aumentado{
+    header ul li.aumentado {
         transform: translateX(0px);
     }
-    header ul li:nth-child(1).aumentado{
+
+    header ul li:nth-child(1).aumentado {
         transition-delay: 0.1s;
     }
-    header ul li:nth-child(2).aumentado{
+
+    header ul li:nth-child(2).aumentado {
         transition-delay: 0.2s;
     }
-    header ul li:nth-child(3).aumentado{
+
+    header ul li:nth-child(3).aumentado {
         transition-delay: 0.3s;
     }
-    header ul li:nth-child(4).aumentado{
+
+    header ul li:nth-child(4).aumentado {
         transition-delay: 0.4s;
     }
-    header ul li:nth-child(5).aumentado{
+
+    header ul li:nth-child(5).aumentado {
         transition-delay: 0.5s;
     }
-    header ul li:nth-child(6).aumentado{
+
+    header ul li:nth-child(6).aumentado {
         transition-delay: 0.6s;
     }
-    header ul li:nth-child(7).aumentado{
+
+    header ul li:nth-child(7).aumentado {
         transition-delay: 0.7s;
     }
+
     header ul li.aumentado:hover {
         color: #0e978f;
         transition-delay: 0s;
@@ -332,46 +351,52 @@ header ul li {
     /*Footer*/
 
     .footer {
-        height: 200px;
+        height: 240px;
         padding: 20px 50px 20px;
+        display: grid;
+        grid-template-areas: "footer1 footer2 footer3 footer4"
+            ". . . footer-redes";
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 3fr 1fr;
+        justify-items: center;
+
     }
 
-    .h2 {
+    .footer1 {
+        display: block;
+        grid-area: footer1;
+        cursor: pointer;
+    }
+
+    .footer2 {
+        display: block;
+        grid-area: footer2;
+        cursor: pointer;
+    }
+
+    .footer3 {
+        display: block;
+        grid-area: footer3;
+        cursor: pointer;
+    }
+
+    .footer4 {
+        display: block;
+        grid-area: footer4;
+        cursor: pointer;
+    }
+
+    .footer-redes {
+        grid-area: footer-redes;
+        cursor: pointer;
+    }
+
+    .h2{
+        font-size: 20px;
+    }
+
+    .h3{
         font-size: 18px;
     }
 
-    .h3 {
-        font-size: 15px;
-    }
-
-}
-/* hamburguesa animada*/
-
-.hamburguesa{
-  display: flex;
-  flex-direction: column;
-  z-index: 8;
-}
-
-.capas-hamburguesa{
-  border-top: solid 2px #FFFEF8;
-  width: 25px;
-  transition: transform 0.8s , opacity 0.5s;
-  margin: 5px;
-  
-}
-
-.capa-1.open{
-  transform: translateY(12px) rotate(405deg);
-  
-}
-
-.capa-2.open{
-  transform: rotate(-405deg);
-  
-}
-
-.capa-3.open{
-  transform: translateY(-15px);
-  opacity: 0;
 }
