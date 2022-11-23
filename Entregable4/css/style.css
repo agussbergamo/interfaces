@@ -285,6 +285,7 @@ header ul li {
         overflow: hidden;
         transition: all 1s ease;
         transform: translateX(350px);
+        cursor: pointer;
     }
 
     header ul li.aumentado {
