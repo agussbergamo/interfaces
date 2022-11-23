@@ -149,7 +149,7 @@ let imgs = document.querySelectorAll(".img");
 })*/
 
 
-// Acerca el nombre de los personajes y el título en la sección habilidades
+// Acerca título y subtítulo en la sección habilidades de los personajes
 
 function acercarPersonajes() {
   let titulos_animados = document.querySelectorAll(".titulo_animado");
