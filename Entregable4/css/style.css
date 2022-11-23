@@ -229,14 +229,6 @@ header ul li {
         transition: height 0.1s ease-in;
     }
 
-    .capas-hamburguesa.sticky {
-
-        width: 20px;
-        margin: 3px;
-        transition: height 0.1s ease-in;
-    }
-
-
     /* redes header */
 
     header div .redes {
