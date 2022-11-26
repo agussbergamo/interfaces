@@ -124,14 +124,14 @@ window.addEventListener("scroll", function () {
   imgs.forEach(function (t) {
     t.classList.add("imgOculta")
   })
-  if (scrollY < 2300) {
+  if (scrollY < 2080) {
     textos[0].classList.remove("oculto");
     imgs[0].classList.remove("imgOculta");
   }
-  else if (scrollY >= 2300 && scrollY < 2600) {
+  else if (scrollY >= 2080 && scrollY < 2300) {
     textos[1].classList.remove("oculto");
     imgs[1].classList.remove("imgOculta");
-  } else if (scrollY >= 2600 && scrollY < 3000) {
+  } else if (scrollY >= 2300 && scrollY < 2680) {
     textos[2].classList.remove("oculto")
     imgs[2].classList.remove("imgOculta");
   } else {
