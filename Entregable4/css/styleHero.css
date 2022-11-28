@@ -305,34 +305,26 @@ p.titulo_bajar{
 .titulo_bajar.aparecer{
   transform: translateY(50px);
   opacity: 1;
-  transition: 2s all ease;
+  transition: transform 2s ease, opacity 2s 0.5s ease-in-out;
 }
 
 .titulo_bajar.desaparecer{
   transform: translateY(-50px);
   opacity: 0;
-  transition: 2s all ease;
+  transition: transform 2s ease, opacity 2s 0.5s ease-in-out;
 }
 
 .titulo_subir.aparecer{
   transform: translateY(-50px);
   opacity: 1;
-  transition: 2s all ease;
+  transition: transform 2s ease, opacity 2s 0.5s ease-in-out;
 }
 
 .titulo_subir.desaparecer{
   transform: translateY(50px);
   opacity: 0;
-  transition: 2s all ease;
+  transition: transform 2s ease, opacity 2s 0.5s ease-in-out;
 }
-
-/*
-Este lo hice para probar como queda con los 3 nombres en un div aparte
-.titulo_bajar{
-  display:flex;
-  justify-content: space-around;
-}*/
-
 
 /* Features */
 
